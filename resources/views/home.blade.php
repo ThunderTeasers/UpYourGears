@@ -1,7 +1,13 @@
 @extends('layouts.master')
 
 @section('meta_title')
-    Up Your Gears - все, что вы хотели бы знать о технологиях
+    UpYourGears - полезная информация о компьютере
+@endsection
+@section('meta_description')
+    Все, что Вы хотели бы знать о технологиях
+@endsection
+@section('meta_keywords')
+    обзоры, на, программы, и, полезные, статьи
 @endsection
 
 @section('content')
