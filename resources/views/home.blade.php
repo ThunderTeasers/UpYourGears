@@ -13,7 +13,7 @@
 @section('content')
     <h2 class="h2">Последние статьи</h2>
     @foreach($articles as $article)
-        <div class="items-row clear">
+        <div class="clear">
 			<span class="h3">
 				<a href="/articles/{{ $article->category()->first()->slug }}/{{ $article->slug }}">{{ $article->title }}</a>
 			</span>
