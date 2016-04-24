@@ -1,3 +1,7 @@
+{!! Form::open(['method' => 'POST', 'route' => 'search']) !!}
+    {!! Form::text('search', null, ['required', 'id' => 'search', 'placeholder' => 'Поиск']) !!}
+{!! Form::close() !!}
+
 <div class="right-side_block">
     <span class="right-side_block_header">Информация</span>
     <div class="right-side_block_body">
