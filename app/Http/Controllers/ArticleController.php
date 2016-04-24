@@ -10,6 +10,21 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\App;
 
 class ArticleController extends Controller{
+    /**
+     * Search data from titles and render it
+     *
+     * @param Request $request
+     * @return mixed
+     */
+    public function postSearch(Request $request){
+        $articles = Article::where('title', 'LIKE', '%'.$request['search'].'%')->paginate(1);
+
+        $breadcrumbs = new Breadcrumbs;
+        $breadcrumbs->show = false;
+
+        return view('search', ['articles' => $articles, 'breadcrumbs' => $breadcrumbs]);
+    }
+
     public function getOne($article_slug){
         $article = Article::where(['slug' => $article_slug])->first();
         if(!$article){

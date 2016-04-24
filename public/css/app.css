@@ -28,12 +28,12 @@ body {
 
 #right-side {
   float: left;
-  width: 73%;
-  padding-right: 10px; }
+  width: 25%; }
 
 #left-side {
   float: left;
-  width: 25%; }
+  width: 73%;
+  padding-right: 10px; }
 
 .h1, .h2, .h3 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -145,6 +145,10 @@ label {
   display: block; }
 
 .form-group {
+  margin-bottom: 20px; }
+
+#search {
+  padding: 9px;
   margin-bottom: 20px; }
 
 .right-side_block {

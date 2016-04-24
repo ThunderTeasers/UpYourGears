@@ -27,6 +27,11 @@ Route::get('/registration', [
 
 Route::post('/registration', 'UserController@postRegistration');
 
+Route::post('/search', [
+    'uses' => 'ArticleController@postSearch',
+    'as' => 'search'
+]);
+
 /**
  * Admin group
  */
@@ -210,26 +215,26 @@ Route::get('/articles/{category_slug}/{article_slug}', [
     'as' => 'categories.category.article'
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');
 
-/**
- * Get parent category by slug
- */
-Route::get('/{category_slug}', [
-    'uses' => 'CategoryController@getParentCategoryForClient',
-    'as' => 'categories'
-])->where('category', '[A-Za-z0-9-_]+');
-
-/**
- * Get category by slug
- */
-Route::get('/{parent_slug}/{category_slug}', [
-    'uses' => 'CategoryController@getCategoryForClient',
-    'as' => 'category'
-])->where('parent_slug', '[A-Za-z0-9-_]+', 'category_slug', '[A-Za-z0-9-_]+');
-
-/**
- * Get article by slug
- */
-Route::get('/{parent_slug}/{category_slug}/{article_slug}', [
-    'uses' => 'ArticleController@getOne',
-    'as' => 'article'
-])->where('parent_slug', '[A-Za-z0-9-_]+', 'category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');
+///**
+// * Get parent category by slug
+// */
+//Route::get('/{category_slug}', [
+//    'uses' => 'CategoryController@getParentCategoryForClient',
+//    'as' => 'categories'
+//])->where('category', '[A-Za-z0-9-_]+');
+//
+///**
+// * Get category by slug
+// */
+//Route::get('/{parent_slug}/{category_slug}', [
+//    'uses' => 'CategoryController@getCategoryForClient',
+//    'as' => 'category'
+//])->where('parent_slug', '[A-Za-z0-9-_]+', 'category_slug', '[A-Za-z0-9-_]+');
+//
+///**
+// * Get article by slug
+// */
+//Route::get('/{parent_slug}/{category_slug}/{article_slug}', [
+//    'uses' => 'ArticleController@getOne',
+//    'as' => 'article'
+//])->where('parent_slug', '[A-Za-z0-9-_]+', 'category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');

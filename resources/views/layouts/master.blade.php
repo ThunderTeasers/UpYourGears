@@ -12,13 +12,13 @@
     @include('includes.navbar')
     <div class="container" id="wrapper">
         @include('includes.header')
-        <aside id="right-side">
+        <aside id="left-side">
             @if(!Request::is('/'))
                 @include('includes.breadcrumbs')
             @endif
             @yield('content')
         </aside>
-        <aside id="left-side">
+        <aside id="right-side">
             @include('includes.right-side')
         </aside>
     </div>

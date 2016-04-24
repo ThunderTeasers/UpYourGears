@@ -235,6 +235,10 @@ label {
 .form-group {
   margin-bottom: 20px; }
 
+#search {
+  padding: 9px;
+  margin-bottom: 20px; }
+
 html {
   position: relative;
   min-height: 100%; }
