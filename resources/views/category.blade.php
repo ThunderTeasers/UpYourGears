@@ -20,4 +20,6 @@
             {!! $article->description !!}
         </div>
     @endforeach
+
+    {{ $articles->render() }}
 @endsection

@@ -1,0 +1,33 @@
+ul.pagination{
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  li{
+    display: inline-block;
+    border: 1px solid $third-color;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background-color: $first-color;
+
+    &:not(:last-child){
+      border-right: none;
+    }
+
+    &.disabled{
+      color: $text-color;
+    }
+
+    &.active{
+      color: $first-color;
+      background-color: $third-color;
+    }
+
+    a, span{
+      display: block;
+    }
+  }
+}

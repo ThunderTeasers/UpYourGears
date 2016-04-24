@@ -207,4 +207,27 @@ label {
   display: block;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
+ul.pagination {
+  list-style: none;
+  margin: 40px 0 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  ul.pagination li {
+    display: inline-block;
+    border: 1px solid #d55800;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background-color: #242424; }
+    ul.pagination li:not(:last-child) {
+      border-right: none; }
+    ul.pagination li.disabled {
+      color: #a5a5a5; }
+    ul.pagination li.active {
+      color: #242424;
+      background-color: #d55800; }
+    ul.pagination li a, ul.pagination li span {
+      display: block; }
+
 /*# sourceMappingURL=app.css.map */
