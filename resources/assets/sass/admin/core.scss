@@ -1,0 +1,40 @@
+$first-color: #121212;
+$second-color: #2b2b2b;
+$third-color: #ee6300;
+$text-color: #c1c1c1;
+$danger-text: #ed0000;
+$danger-main: #e0a5ab;
+$danger-second: #b50000;
+
+html, body{
+  height: 100%;
+}
+
+body{
+  min-width: 700px;
+  background-color: #b7b7b7;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.danger{
+  background-color: $danger-main;
+  border: 1px solid $danger-text;
+  color: $danger-text;
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    li{
+      padding: 5px;
+    }
+  }
+}
+
+a{
+  color: $third-color;
+}

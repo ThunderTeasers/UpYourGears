@@ -1,0 +1,62 @@
+@import "admin/core";
+
+body{
+  background-color: $first-color;
+}
+
+.login-wrapper {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+
+  #answer {
+    span {
+      color: $text-color;
+      display: block;
+      float: left;
+      width: 30%;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    input {
+      width: 70%;
+      float: right;
+    }
+  }
+
+  form {
+    position: relative;
+    z-index: 1;
+    background: #2b2b2b;
+    max-width: 360px;
+    padding: 45px;
+    text-align: center;
+
+    input, button{
+      outline: 0;
+      width: 100%;
+      color: #fff;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    input[type='text'], input[type='password'], input[type='email'] {
+      background: #121212;
+      border: 1px solid $third-color;
+      margin: 0 0 15px;
+      box-sizing: border-box;
+    }
+
+    input[type='submit'] {
+      text-transform: uppercase;
+      background: $third-color;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.danger{
+  margin-bottom: 20px;
+}

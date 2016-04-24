@@ -1,0 +1,35 @@
+#navbar{
+  background-color: $first-color;
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid $third-color;
+  color: $third-color;
+
+  #navbar__user__name{
+    color: $text-color;
+  }
+
+  ul{
+    list-style: none;
+    
+    li{
+      float: left;
+
+      a{
+        color: $third-color;
+        display: block;
+        text-decoration: none;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+
+  span{
+    color: $second-text-color;
+
+    a{
+      color: $third-color;
+    }
+  }
+}

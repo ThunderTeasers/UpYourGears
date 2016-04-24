@@ -1,0 +1,23 @@
+.breadcrumbs{
+  list-style: none;
+  margin-bottom: 40px;
+  display: block;
+
+  li{
+    float: left;
+    font-size: 14px;
+
+    a{
+      color: $second-text-color;
+    }
+
+    .divider{
+      padding: 0 5px;
+      color: $second-text-color;
+    }
+
+    span{
+      color: $third-color;
+    }
+  }
+}

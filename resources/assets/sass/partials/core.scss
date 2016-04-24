@@ -1,0 +1,26 @@
+$first-color: #242424;
+$second-color: #2a2a2a;
+$third-color: #d55800;
+$text-color: #a5a5a5;
+$second-text-color: #dedede;
+$danger-text: #ed0000;
+$danger-main: #e0a5ab;
+$danger-second: #b50000;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $third-color;
+  text-decoration: none;
+}
+
+p {
+  padding-bottom: 8px;
+}
+
+body{
+  background-color: $second-color;
+}

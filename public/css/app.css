@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #d55800;
+  text-decoration: none; }
+
+p {
+  padding-bottom: 8px; }
+
+body {
+  background-color: #2a2a2a; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+
+#right-side {
+  float: left;
+  width: 73%;
+  padding-right: 10px; }
+
+#left-side {
+  float: left;
+  width: 25%; }
+
+.h1, .h2, .h3 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  display: block;
+  color: #d55800;
+  font-weight: 400; }
+
+.h1 {
+  font-size: 26px;
+  line-height: 28px;
+  margin-bottom: 12px; }
+
+.h2 {
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 12px; }
+
+.h3 {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 8px; }
+
+.clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.pull-right {
+  float: right; }
+
+#navbar {
+  background-color: #242424;
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #d55800;
+  color: #d55800; }
+  #navbar #navbar__user__name {
+    color: #a5a5a5; }
+  #navbar ul {
+    list-style: none; }
+    #navbar ul li {
+      float: left; }
+      #navbar ul li a {
+        color: #d55800;
+        display: block;
+        text-decoration: none;
+        padding-left: 8px;
+        padding-right: 8px; }
+  #navbar span {
+    color: #dedede; }
+    #navbar span a {
+      color: #d55800; }
+
+.breadcrumbs {
+  list-style: none;
+  margin-bottom: 40px;
+  display: block; }
+  .breadcrumbs li {
+    float: left;
+    font-size: 14px; }
+    .breadcrumbs li a {
+      color: #dedede; }
+    .breadcrumbs li .divider {
+      padding: 0 5px;
+      color: #dedede; }
+    .breadcrumbs li span {
+      color: #d55800; }
+
+#wrapper_header {
+  margin-top: 30px;
+  margin-bottom: 10px; }
+  #wrapper_header h1 {
+    font-size: 60px;
+    font-weight: 400;
+    color: #d55800;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  #wrapper_header p {
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 27px;
+    color: #a5a5a5; }
+
+input[type='text'], input[type='email'], input[type='password'], textarea, select {
+  border: 1px solid #d55800;
+  background-color: #242424;
+  outline: none;
+  color: #a5a5a5;
+  padding: 4px;
+  width: 100%;
+  box-sizing: border-box; }
+
+input[type='button']:not(.table__delete), input[type='submit']:not(.table__delete) {
+  text-align: center;
+  display: block;
+  border: 1px solid #d55800;
+  background-color: #242424;
+  padding: 10px;
+  cursor: pointer;
+  color: #a5a5a5;
+  outline: none;
+  font-size: 16px; }
+
+label {
+  color: #a5a5a5;
+  margin-bottom: 2px;
+  display: block; }
+
+.form-group {
+  margin-bottom: 20px; }
+
+.right-side_block {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #242424;
+  border: 1px solid #d55800; }
+  .right-side_block .right-side_block_header {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #d55800;
+    display: block;
+    border-bottom: 1px solid #d55800;
+    margin: 0 0 5px; }
+  .right-side_block .right-side_block_body {
+    color: #a5a5a5;
+    font-size: 15px; }
+
+.page-header {
+  border-bottom: 1px solid #d55800;
+  margin-bottom: 10px; }
+
+.page-description {
+  font-family: Georgia,"Times New Roman",Times,serif;
+  color: #a5a5a5;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 20px; }
+
+#comments #comments__list .comments_comment {
+  border-top: 1px solid #434343;
+  color: #a5a5a5;
+  padding: 10px 0; }
+  #comments #comments__list .comments_comment .comments_comment_author {
+    width: 13%;
+    float: left;
+    text-align: center; }
+    #comments #comments__list .comments_comment .comments_comment_author img {
+      border-radius: 50%;
+      height: 50px;
+      display: block;
+      margin: 0 auto 4px; }
+    #comments #comments__list .comments_comment .comments_comment_author span {
+      font-size: 17px; }
+  #comments #comments__list .comments_comment .comments_comment_body {
+    float: left; }
+
+#comments #comments__header {
+  color: #a5a5a5;
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  display: block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+/*# sourceMappingURL=app.css.map */

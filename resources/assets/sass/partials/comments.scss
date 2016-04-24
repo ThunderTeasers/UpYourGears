@@ -1,0 +1,38 @@
+#comments{
+  #comments__list{
+    .comments_comment{
+      border-top: 1px solid #434343;
+      color: $text-color;
+      padding: 10px 0;
+
+      .comments_comment_author{
+        width: 13%;
+        float: left;
+        text-align: center;
+
+        img{
+          border-radius: 50%;
+          height: 50px;
+          display: block;
+          margin: 0 auto 4px;
+        }
+        span{
+          font-size: 17px;
+        }
+      }
+
+      .comments_comment_body{
+        float: left;
+      }
+    }
+  }
+
+  #comments__header{
+    color: $text-color;
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: block;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+}

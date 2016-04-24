@@ -1,0 +1,23 @@
+.right-side_block{
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: $first-color;
+  border: 1px solid $third-color;
+
+  .right-side_block_header{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: $third-color;
+    display: block;
+    border-bottom: 1px solid $third-color;
+    margin: 0 0 5px;
+  }
+
+  .right-side_block_body{
+    color: $text-color;
+    font-size: 15px;
+  }
+}

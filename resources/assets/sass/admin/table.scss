@@ -1,0 +1,40 @@
+table{
+  width: 100%;
+  border-collapse: collapse;
+  tr{
+    border: 1px solid #515151;
+
+    th{
+      line-height: 35px;
+      height: 35px;
+    }
+
+    td{
+      padding: 5px;
+
+      &:last-child{
+        width: 13%;
+      }
+    }
+  }
+
+  form{
+    display: inline-block;
+  }
+
+  .table__view, .table__delete{
+    text-decoration: none;
+  }
+
+  .table__view{
+    color: #00b3ee;
+  }
+
+  .table__delete{
+    background: none;
+    border: none;
+    color: #780000;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
