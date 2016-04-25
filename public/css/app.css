@@ -20,6 +20,9 @@ code {
   color: #dedede;
   font-size: 13px; }
 
+ul, ol {
+  margin: 0 0 9px 25px; }
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -216,6 +219,11 @@ label {
   font-size: 13px;
   font-weight: bold;
   color: #242424; }
+
+.article-logo {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 20px; }
 
 #comments #comments__list .comments_comment {
   border-top: 1px solid #434343;
