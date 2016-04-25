@@ -188,6 +188,36 @@ class CategoryController extends Controller{
     }
 
     /**
+     * Render list of blog
+     *
+     * @return mixed
+     */
+    public function getBlog(){
+        $category = Category::where(['slug' => 'blog'])->first();
+        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
+
+        $breadcrumbs = new Breadcrumbs;
+        $breadcrumbs->add('Блог', '/blog');
+
+        return view('category', ['category' => $category, 'articles' => $articles, 'breadcrumbs' => $breadcrumbs]);
+    }
+
+    /**
+     * Render list of sites
+     *
+     * @return mixed
+     */
+    public function getSites(){
+        $category = Category::where(['slug' => 'sites'])->first();
+        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
+
+        $breadcrumbs = new Breadcrumbs;
+        $breadcrumbs->add('Сайты', '/sites');
+
+        return view('category', ['category' => $category, 'articles' => $articles, 'breadcrumbs' => $breadcrumbs]);
+    }
+
+    /**
      * Render list of articles
      *
      * @return mixed
