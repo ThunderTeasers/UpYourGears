@@ -216,6 +216,14 @@ Route::get('/sites', [
 ]);
 
 /**
+ * Get one sites article
+ */
+Route::get('/sites/{site_slug}', [
+    'uses' => 'ArticleController@getOne',
+    'as' => 'article.sites.one'
+])->where('site_slug', '[A-Za-z0-9-_]+');
+
+/**
  * Get articles
  */
 Route::get('/articles', [
