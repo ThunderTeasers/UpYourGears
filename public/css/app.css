@@ -113,7 +113,7 @@ ul, ol {
 
 .breadcrumbs {
   list-style: none;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
   display: block; }
   .breadcrumbs li {
     float: left;
