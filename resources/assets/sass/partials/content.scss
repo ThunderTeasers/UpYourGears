@@ -21,3 +21,13 @@
 .category_article{
   margin-bottom: 20px;
 }
+
+.category-count{
+  float: right;
+  width: 20px;
+  text-align: center;
+  background-color: $third-color;
+  font-size: 13px;
+  font-weight: bold;
+  color: $first-color;
+}

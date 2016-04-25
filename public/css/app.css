@@ -192,6 +192,15 @@ label {
 .category_article {
   margin-bottom: 20px; }
 
+.category-count {
+  float: right;
+  width: 20px;
+  text-align: center;
+  background-color: #d55800;
+  font-size: 13px;
+  font-weight: bold;
+  color: #242424; }
+
 #comments #comments__list .comments_comment {
   border-top: 1px solid #434343;
   color: #a5a5a5;

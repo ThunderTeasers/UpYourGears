@@ -17,6 +17,9 @@
             <a href="/{{ $category->slug.'/'.$child->slug }}">
                 {{ $child->title }}
             </a>
+            <span class="category-count">
+                {{ $child->articles()->count() }}
+            </span>
         </span>
     @endforeach
 @endsection
