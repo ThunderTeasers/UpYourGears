@@ -158,7 +158,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
+        Jenssegers\Date\DateServiceProvider::class,
     ],
 
     /*
@@ -207,6 +207,7 @@ return [
         'HTML' => Collective\Html\HtmlFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Date' => Jenssegers\Date\Date::class,
     ],
 
 ];

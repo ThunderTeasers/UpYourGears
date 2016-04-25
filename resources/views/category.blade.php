@@ -15,6 +15,7 @@
     @foreach($articles as $article)
         <span class="page-header h2">
             <a href="{{ $category->slug.'/'.$article->slug }}">{{ $article->title }}</a>
+            <span class="date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}</span>
         </span>
         <div class="page-description">
             {!! $article->description !!}

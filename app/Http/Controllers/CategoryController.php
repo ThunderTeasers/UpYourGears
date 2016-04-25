@@ -8,6 +8,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
+use Jenssegers\Date\Date;
 
 class CategoryController extends Controller{
     /**
