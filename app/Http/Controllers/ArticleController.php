@@ -92,6 +92,7 @@ class ArticleController extends Controller{
         $article->description = $request['description'];
         $article->body = $request['body'] ? $request['body'] : null;
         $article->category_id = $request['category_id'];
+        $article->created_at = $request['created_at'];
         $article->slug = $request['slug'];
         $article->meta_title = $request['meta_title']? $request['meta_title'] : null;
         $article->meta_description = $request['meta_description'] ? $request['meta_description'] : null;
@@ -107,6 +108,7 @@ class ArticleController extends Controller{
         $article->description = $request['description'];
         $article->body = $request['body'];
         $article->category_id = $request['category_id'];
+        $article->created_at = $request['created_at'];
         $article->slug = $request['slug'];
         $article->meta_title = $request['meta_title'];
         $article->meta_description = $request['meta_description'];

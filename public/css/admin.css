@@ -207,7 +207,7 @@ table {
     font-size: 16px;
     cursor: pointer; }
 
-input[type='text'], input[type='email'], input[type='password'], textarea, select {
+input[type='text'], input[type='email'], input[type='password'], input[type='date'], textarea, select {
   border: 1px solid #ee6300;
   background-color: #121212;
   outline: none;

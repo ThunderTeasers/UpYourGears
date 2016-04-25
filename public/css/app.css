@@ -121,7 +121,7 @@ body {
     line-height: 27px;
     color: #a5a5a5; }
 
-input[type='text'], input[type='email'], input[type='password'], textarea, select {
+input[type='text'], input[type='email'], input[type='password'], input[type='date'], textarea, select {
   border: 1px solid #d55800;
   background-color: #242424;
   outline: none;
@@ -188,6 +188,9 @@ label {
   color: #a5a5a5;
   display: block;
   font-size: 12px; }
+
+.category_article {
+  margin-bottom: 20px; }
 
 #comments #comments__list .comments_comment {
   border-top: 1px solid #434343;

@@ -8,7 +8,6 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
-use Jenssegers\Date\Date;
 
 class CategoryController extends Controller{
     /**
@@ -211,7 +210,7 @@ class CategoryController extends Controller{
      */
     public function getCategory($category_slug){
         $category = Category::where(['slug' => $category_slug])->first();
-        $articles = $category->articles()->get();
+        $articles = $category->articles()->paginate(5);
 
         $parent = $category->parent()->first();
 

@@ -24,6 +24,10 @@
             </select>
         </div>
         <div class="form-group">
+            {!! Form::label('created_at', 'Дата создания') !!}
+            {!! Form::date('created_at', null, ['required', 'class' => 'form-control']) !!}
+        </div>
+        <div class="form-group">
             {!! Form::label('slug', 'Slug') !!}
             {!! Form::text('slug', null, ['required']) !!}
         </div>

@@ -24,5 +24,5 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.scripts(['jquery-2.2.3.min.js', 'jquery.fancybox.pack.js', 'fancybox.js']);
+    mix.scripts(['jquery-2.2.3.min.js', 'jquery.fancybox.pack.js', 'jquery.nanoscroller.min.js', 'nano.js', 'fancybox.js']);
 });
