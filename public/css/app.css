@@ -97,6 +97,7 @@ ul, ol {
   #navbar #navbar__user__name {
     color: #a5a5a5; }
   #navbar ul {
+    margin: 0;
     list-style: none; }
     #navbar ul li {
       float: left; }
