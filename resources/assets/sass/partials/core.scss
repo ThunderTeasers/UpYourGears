@@ -22,7 +22,14 @@ p {
   padding-bottom: 8px;
 }
 
-body{
+body {
   background-color: $second-color;
   margin-bottom: 40px;
+}
+
+code{
+  border: 1px solid $third-color;
+  background-color: $first-color;
+  color: $second-text-color;
+  font-size: 13px;
 }

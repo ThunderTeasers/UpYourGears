@@ -14,6 +14,12 @@ body {
   background-color: #2a2a2a;
   margin-bottom: 40px; }
 
+code {
+  border: 1px solid #d55800;
+  background-color: #242424;
+  color: #dedede;
+  font-size: 13px; }
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -68,6 +74,16 @@ body {
 
 .pull-right {
   float: right; }
+
+.callout {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #a5a5a5;
+  background-color: #242424;
+  border-left-width: 5px; }
+
+.callout-info {
+  border-left-color: #1b809e; }
 
 #navbar {
   background-color: #242424;

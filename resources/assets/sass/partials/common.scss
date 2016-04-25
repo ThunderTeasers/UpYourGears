@@ -65,3 +65,15 @@
 .pull-right{
   float: right;
 }
+
+.callout {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid $text-color;
+  background-color: $first-color;
+  border-left-width: 5px;
+}
+
+.callout-info {
+  border-left-color: #1b809e;
+}
