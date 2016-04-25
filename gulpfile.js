@@ -24,5 +24,5 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.scriptsIn('resources/assets/js');
+    mix.scripts(['jquery-2.2.3.min.js', 'jquery.fancybox.pack.js', 'fancybox.js']);
 });

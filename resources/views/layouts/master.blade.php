@@ -10,7 +10,7 @@
 </head>
 <body>
     @include('includes.navbar')
-    <div class="container" id="wrapper">
+    <div class="container clear" id="wrapper">
         @include('includes.header')
         <aside id="left-side">
             @if(!Request::is('/'))
@@ -22,5 +22,7 @@
             @include('includes.right-side')
         </aside>
     </div>
+
+    {{ HTML::script('public/js/all.js') }}
 </body>
 </html>

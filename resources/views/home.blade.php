@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <h2 class="h2">Последние статьи</h2>
+    <h2 class="h2 page-header">Последние статьи</h2>
     @foreach($articles as $article)
         <div class="clear">
 			<span class="h3">
@@ -22,7 +22,7 @@
             </div>
         </div>
     @endforeach
-    <h2 class="h2">Новости</h2>
+    <h2 class="h2 page-header">Новости</h2>
     @foreach($news as $new)
         <div class="items-row clear">
 			<span class="h3">

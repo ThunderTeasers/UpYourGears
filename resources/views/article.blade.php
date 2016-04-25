@@ -7,7 +7,7 @@
 @section('content')
     <div class="page-header">
         <span class="h1">{{ $article->title }}</span>
-        {{--<span class="date">{{ date('F d, Y', strtotime($article->created_at)) }}</span>--}}
+        <span class="date">{{ date('F d, Y', strtotime($article->created_at)) }}</span>
     </div>
     <div class="page-description">
         {!! $article->description !!}

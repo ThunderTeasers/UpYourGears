@@ -16,8 +16,8 @@ class CategoryController extends Controller{
      * @return mixed
      */
     public function getHome(){
-        $articles = Article::whereIn('category_id', [2])->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->take(3)->get();
-        $news = Article::where('category_id', 3)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->take(3)->get();
+        $articles = Article::whereIn('category_id', [2])->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
+        $news = Article::where('category_id', 3)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
 
         return view('home', ['articles' => $articles, 'news' => $news]);
     }
@@ -37,7 +37,7 @@ class CategoryController extends Controller{
 
         //Getting child categories
         $childs = $category->childs()->get();
-        
+
         //Create breadcrumbs
         $breadcrumbs[] = [
             'title' => $category->title,
@@ -179,7 +179,7 @@ class CategoryController extends Controller{
      */
     public function getNews(){
         $category = Category::where(['slug' => 'news'])->first();
-        $articles = $category->articles()->get();
+        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Новости', '/news');

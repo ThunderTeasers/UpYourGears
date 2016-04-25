@@ -10,6 +10,7 @@ $danger-second: #b50000;
 * {
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 a {
@@ -23,4 +24,5 @@ p {
 
 body{
   background-color: $second-color;
+  margin-bottom: 40px;
 }
