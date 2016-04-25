@@ -184,11 +184,11 @@ Route::get('/news', [
 ]);
 
 /**
- * Get one news
+ * Get one news article
  */
 Route::get('/news/{news_slug}', [
     'uses' => 'ArticleController@getOne',
-    'as' => 'article.news'
+    'as' => 'article.news.one'
 ])->where('news_slug', '[A-Za-z0-9-_]+');
 
 /**
@@ -198,6 +198,14 @@ Route::get('/blog', [
     'uses' => 'CategoryController@getBlog',
     'as' => 'categories.blog.list'
 ]);
+
+/**
+ * Get one blog article
+ */
+Route::get('/blog/{blog_slug}', [
+    'uses' => 'ArticleController@getOne',
+    'as' => 'article.blog.one'
+])->where('blog_slug', '[A-Za-z0-9-_]+');
 
 /**
  * Get sites
