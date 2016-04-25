@@ -192,6 +192,22 @@ Route::get('/news/{news_slug}', [
 ])->where('news_slug', '[A-Za-z0-9-_]+');
 
 /**
+ * Get blog
+ */
+Route::get('/blog', [
+    'uses' => 'CategoryController@getBlog',
+    'as' => 'categories.blog.list'
+]);
+
+/**
+ * Get sites
+ */
+Route::get('/sites', [
+    'uses' => 'CategoryController@getSites',
+    'as' => 'categories.sites.list'
+]);
+
+/**
  * Get articles
  */
 Route::get('/articles', [

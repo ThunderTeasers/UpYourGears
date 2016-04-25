@@ -11,6 +11,12 @@
                 <li>
                     <a href="/news">Новости</a>
                 </li>
+                <li>
+                    <a href="/sites">Сайты</a>
+                </li>
+                <li>
+                    <a href="/blog">Блог</a>
+                </li>
             </ul>
 
             <span class="pull-right" id="navbar__user">
