@@ -240,7 +240,7 @@ class CategoryController extends Controller{
      */
     public function getCategory($category_slug){
         $category = Category::where(['slug' => $category_slug])->first();
-        $articles = $category->articles()->paginate(5);
+        $articles = $category->articles()->select(['id', 'title', 'description', 'category_id', 'created_at', 'slug'])->orderBy('created_at', 'DESC')->paginate(5);
 
         $parent = $category->parent()->first();
 

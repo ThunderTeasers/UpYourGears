@@ -18,7 +18,9 @@ code {
   border: 1px solid #d55800;
   background-color: #242424;
   color: #dedede;
-  font-size: 13px; }
+  font-size: 13px;
+  padding-left: 3px;
+  padding-right: 3px; }
 
 ul, ol {
   margin: 0 0 9px 25px; }
@@ -51,6 +53,11 @@ ul, ol {
   display: block;
   color: #d55800;
   font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 12px 0;
+  color: #dedede; }
 
 .h1 {
   font-size: 26px;

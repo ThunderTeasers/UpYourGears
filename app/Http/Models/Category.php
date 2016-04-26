@@ -9,7 +9,7 @@ class Category extends Model{
      * Return relation to the post
      */
     public function articles(){
-        return $this->hasMany('App\Models\Article')->select(['id', 'title', 'description', 'category_id', 'slug']);
+        return $this->hasMany('App\Models\Article');
     }
 
     /**
