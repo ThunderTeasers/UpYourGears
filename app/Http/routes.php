@@ -264,9 +264,9 @@ Route::get('/programs/{category_slug}', [
 ])->where('category_slug', '[A-Za-z0-9-_]+');
 
 /**
- * Get program programs =\
+ * Get programs program =\
  */
-Route::get('/articles/{category_slug}/{program_slug}', [
+Route::get('/programs/{category_slug}/{program_slug}', [
     'uses' => 'ArticleController@getOneFromCategory',
     'as' => 'categories.category.program'
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'program_slug', '[A-Za-z0-9-_]+');
