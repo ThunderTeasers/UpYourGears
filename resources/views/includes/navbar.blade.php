@@ -9,6 +9,9 @@
                     <a href="/articles">Статьи</a>
                 </li>
                 <li>
+                    <a href="/programs">Программы</a>
+                </li>
+                <li>
                     <a href="/news">Новости</a>
                 </li>
                 <li>

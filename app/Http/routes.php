@@ -246,3 +246,27 @@ Route::get('/articles/{category_slug}/{article_slug}', [
     'uses' => 'ArticleController@getOneFromCategory',
     'as' => 'categories.category.article'
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');
+
+/**
+ * Get programms
+ */
+Route::get('/programs', [
+    'uses' => 'CategoryController@getPrograms',
+    'as' => 'categories.programs'
+]);
+
+/**
+ * Get programs category
+ */
+Route::get('/programs/{category_slug}', [
+    'uses' => 'CategoryController@getCategory',
+    'as' => 'categories.category'
+])->where('category_slug', '[A-Za-z0-9-_]+');
+
+/**
+ * Get program programs =\
+ */
+Route::get('/articles/{category_slug}/{program_slug}', [
+    'uses' => 'ArticleController@getOneFromCategory',
+    'as' => 'categories.category.program'
+])->where('category_slug', '[A-Za-z0-9-_]+', 'program_slug', '[A-Za-z0-9-_]+');

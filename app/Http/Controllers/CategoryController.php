@@ -250,4 +250,19 @@ class CategoryController extends Controller{
 
         return view('category', ['category' => $category, 'articles' => $articles, 'breadcrumbs' => $breadcrumbs]);
     }
+
+    /**
+     * Render list of programms
+     *
+     * @return mixed
+     */
+    public function getPrograms(){
+        $category = Category::where(['slug' => 'programs'])->first();
+        $childs = $category->childs()->get();
+
+        $breadcrumbs = new Breadcrumbs;
+        $breadcrumbs->add('Программы', '/programs');
+
+        return view('categories', ['category' => $category, 'childs' => $childs, 'breadcrumbs' => $breadcrumbs]);
+    }
 }
