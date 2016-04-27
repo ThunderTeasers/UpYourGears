@@ -5,13 +5,15 @@
 @section('meta_keywords'){{ $article->meta_keywords }}@endsection
 
 @section('content')
-    <div class="page-header">
-        <span class="h1">{{ $article->title }}</span>
-        <span class="date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}</span>
-    </div>
-    <div class="page-description">
-        {!! $article->description !!}
-        {!! $article->body !!}
+    <div class="clear">
+        <div class="page-header">
+            <span class="h1">{{ $article->title }}</span>
+            <span class="date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}</span>
+        </div>
+        <div class="page-description">
+            {!! $article->description !!}
+            {!! $article->body !!}
+        </div>
     </div>
 
     @include('includes.comments')
