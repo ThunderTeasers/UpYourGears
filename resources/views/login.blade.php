@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Логин</title>
-    {{ HTML::style('public/css/login.css') }}
+    <link rel="stylesheet" href="/public/css/login.css">
 </head>
 <body>
+    {{ URL::forceSchema('https') }}
+
     <div class="login-wrapper">
         {!! Form::open() !!}
             @if(count($errors) > 0)
