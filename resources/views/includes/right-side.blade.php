@@ -1,4 +1,3 @@
-{{ URL::forceSchema('https') }}
 {!! Form::open(['method' => 'POST', 'route' => 'search']) !!}
     {!! Form::text('search', null, ['required', 'id' => 'search', 'placeholder' => 'Поиск']) !!}
 {!! Form::close() !!}

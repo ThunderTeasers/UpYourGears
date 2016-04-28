@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')</title>
-    {{ HTML::style('public/css/admin.css') }}
+    <link rel="stylesheet" href="/public/css/admin.css">
 </head>
 <body>
+    {{ URL::forceSchema('https') }}
+
     @include('dashboard.includes.left')
     <aside id="right">
         <div id="right__wrapper">

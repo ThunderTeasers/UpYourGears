@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/public/css/app.css">
 </head>
 <body>
+    {{ URL::forceSchema('https') }}
+
     @include('includes.navbar')
     <div class="container clear" id="wrapper">
         @include('includes.header')
