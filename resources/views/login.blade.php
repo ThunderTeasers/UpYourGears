@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Логин</title>
     <link rel="stylesheet" href="/public/css/login.css">
-
 </head>
 <body>
     {{ URL::forceSchema('https') }}
