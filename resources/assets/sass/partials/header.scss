@@ -16,3 +16,11 @@
     color: $text-color;
   }
 }
+
+@media screen and (max-width: $mobile-size){
+  #wrapper_header{
+    h1, p{
+      display: none;
+    }
+  }
+}

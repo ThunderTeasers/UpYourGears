@@ -87,3 +87,9 @@ h1, h2, h3, h4, h5, h6 {
 .callout-danger {
   border-left-color: #ce4844;
 }
+
+@media screen and (max-width: $tablet-size){
+  #right-side, #left-side{
+    width: 100%;
+  }
+}
