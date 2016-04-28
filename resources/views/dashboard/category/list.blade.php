@@ -25,7 +25,7 @@
             </td>
             <td class="center">
                 <a class="table__view" href="/dashboard/categories/{{ $category->id }}">Изменить</a> |
-                {!! delete_form(['dashboard.categories.delete', $category->id]) !!}
+                {!! \App\Helpers\Helpers::delete_form(['dashboard.categories.delete', $category->id]) !!}
             </td>
         </tr>
     @endforeach
