@@ -180,6 +180,10 @@ class CategoryController extends Controller{
      */
     public function getNews(){
         $category = Category::where(['slug' => 'news'])->first();
+        if(!$category){
+            App::abort(404);
+        }
+
         $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
@@ -195,6 +199,10 @@ class CategoryController extends Controller{
      */
     public function getBlog(){
         $category = Category::where(['slug' => 'blog'])->first();
+        if(!$category){
+            App::abort(404);
+        }
+
         $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
@@ -210,6 +218,10 @@ class CategoryController extends Controller{
      */
     public function getSites(){
         $category = Category::where(['slug' => 'sites'])->first();
+        if(!$category){
+            App::abort(404);
+        }
+
         $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
@@ -225,6 +237,10 @@ class CategoryController extends Controller{
      */
     public function getArticles(){
         $category = Category::where(['slug' => 'articles'])->first();
+        if(!$category){
+            App::abort(404);
+        }
+
         $childs = $category->childs()->get();
 
         $breadcrumbs = new Breadcrumbs;
@@ -241,6 +257,10 @@ class CategoryController extends Controller{
      */
     public function getCategory($category_slug){
         $category = Category::where(['slug' => $category_slug])->first();
+        if(!$category){
+            App::abort(404);
+        }
+
         $articles = $category->articles()->select(['id', 'title', 'description', 'category_id', 'created_at', 'slug'])->orderBy('created_at', 'DESC')->paginate(5);
 
         $parent = $category->parent()->first();
