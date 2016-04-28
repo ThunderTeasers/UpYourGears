@@ -29,7 +29,8 @@ Route::post('/registration', 'UserController@postRegistration');
 
 Route::post('/search', [
     'uses' => 'ArticleController@postSearch',
-    'as' => 'search'
+    'as' => 'search',
+    'https' => true
 ]);
 
 /**
