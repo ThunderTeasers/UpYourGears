@@ -138,7 +138,8 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
      */
     Route::delete('/dashboard/categories/delete/{category_id}', [
         'uses' => 'CategoryController@deleteCategory',
-        'as' => 'dashboard.categories.delete'
+        'as' => 'dashboard.categories.delete',
+        'https' => true
     ]);
 
     /**
