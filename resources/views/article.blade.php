@@ -16,5 +16,5 @@
         </div>
     </div>
 
-    @include('includes.comments')
+    {{--@include('includes.comments')--}}
 @endsection

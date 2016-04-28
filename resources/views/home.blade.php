@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <h2 class="h2 page-header">Последние статьи</h2>
+    <span class="h1 page-header">Последние статьи</span>
     @foreach($articles as $article)
         <div class="clear">
 			<span class="h3">
@@ -21,10 +21,25 @@
                 {!! $article->description !!}
             </div>
         </div>
+        <br>
     @endforeach
-    <h2 class="h2 page-header">Новости</h2>
+    <br>
+    <span class="h1 page-header">Блог</span>
+    @foreach($blog as $b)
+        <div class="clear">
+			<span class="h3">
+				<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>
+			</span>
+            <div class="page-description">
+                {!! $b->description !!}
+            </div>
+        </div>
+        <br>
+    @endforeach
+    <br>
+    <span class="h1 page-header">Новости</span>
     @foreach($news as $new)
-        <div class="items-row clear">
+        <div class="clear">
 			<span class="h3">
 				<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>
 			</span>
@@ -32,5 +47,6 @@
                 {!! $new->description !!}
             </div>
         </div>
+        <br>
     @endforeach
 @endsection
