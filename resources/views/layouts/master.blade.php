@@ -7,7 +7,6 @@
     <meta name="description" content="@yield('meta_description')">
     <title>@yield('meta_title')</title>
     <link rel="stylesheet" href="/public/css/app.css">
-    {{ HTML::style('public/css/app.css') }}
 </head>
 <body>
     @include('includes.navbar')
