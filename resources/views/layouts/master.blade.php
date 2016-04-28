@@ -7,6 +7,7 @@
     <meta name="description" content="@yield('meta_description')">
     <title>@yield('meta_title')</title>
     <link rel="stylesheet" href="/public/css/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>
     {{ URL::forceSchema('https') }}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Логин</title>
     <link rel="stylesheet" href="/public/css/login.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>
     {{ URL::forceSchema('https') }}

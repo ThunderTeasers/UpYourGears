@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@yield('meta_title')</title>
     <link rel="stylesheet" href="/public/css/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>
 <div class="container" id="wrapper">
