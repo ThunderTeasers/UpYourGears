@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /css
+Disallow: /fonts
+Disallow: /js
+
+Sitemap: https://upyourgears.ru/sitemap.xml
+Host: upyourgears.ru
