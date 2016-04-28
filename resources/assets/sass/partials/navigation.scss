@@ -1,12 +1,31 @@
 #navbar{
   background-color: $first-color;
-  height: 36px;
+  min-height: 36px;
   line-height: 36px;
   border-bottom: 1px solid $third-color;
   color: $third-color;
 
   #navbar__user__name{
     color: $text-color;
+  }
+
+  .container{
+    #navbar__header{
+      padding-top: 13px;
+
+      button{
+        position: relative;
+        top: -7px;
+        float: right;
+        background: transparent none;
+        border: 1px solid transparent;
+
+        img{
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
   }
 
   ul{
@@ -26,11 +45,49 @@
     }
   }
 
+  #navbar__header{
+    display: none;
+  }
+
   span{
     color: $second-text-color;
 
     a{
       color: $third-color;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-size){
+  #navbar{
+    #menu{
+      display: none;
+    }
+
+    ul{
+      li{
+        width: 100%;
+        border-top: 1px solid $third-color;
+      }
+
+      &:after{
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+      }
+    }
+
+    #navbar__header{
+      display: block;
+    }
+
+    background-color: $first-color;
+
+    #dropdown{
+      display: block;
     }
   }
 }
