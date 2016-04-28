@@ -6,6 +6,7 @@
     <meta name="keywords" content="@yield('meta_keywords')">
     <meta name="description" content="@yield('meta_description')">
     <title>@yield('meta_title')</title>
+    <link rel="stylesheet" href="/public/css/app.css">
     {{ HTML::style('public/css/app.css') }}
 </head>
 <body>
@@ -23,6 +24,6 @@
         </aside>
     </div>
 
-    {{ HTML::script('public/js/all.js') }}
+    <script src="public/js/all.js"></script>
 </body>
 </html>
