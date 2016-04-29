@@ -5,11 +5,13 @@
 @section('meta_keywords'){{ $category->meta_keywords }}@endsection
 
 @section('content')
-    <div class="page-header" itemscope itemtype="http://schema.org/Article">
-        <span class="h1" itemprop="name">{{ $category->title }}</span>
-    </div>
-    <div class="page-description" itemprop="description">
-        {!! $category->description !!}
+    <div itemscope itemtype="http://schema.org/Article">
+        <div class="page-header">
+            <span class="h1" itemprop="name">{{ $category->title }}</span>
+        </div>
+        <div class="page-description" itemprop="description">
+            {!! $category->description !!}
+        </div>
     </div>
 
     @foreach($childs as $child)
