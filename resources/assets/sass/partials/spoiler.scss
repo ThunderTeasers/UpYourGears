@@ -1,0 +1,29 @@
+.spoiler{
+  &.spoiler-open:before{
+    background: url(/public/images/common/spoiler.png) left bottom no-repeat;
+  }
+
+  &:before{
+    display: block;
+    float: left;
+    background: url(/public/images/common/spoiler.png) left top no-repeat;
+    width: 16px;
+    height: 16px;
+    content: ' ';
+  }
+
+  .spoiler__head{
+    color: $third-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .spoiler__body{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: none;
+    border: 1px solid $third-color;
+    background-color: $first-color;
+    padding: 5px;
+  }
+}
