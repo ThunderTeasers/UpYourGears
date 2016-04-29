@@ -26,7 +26,7 @@
                 </div>
             </div>
         @endforeach
-
         {{ $articles->render() }}
     </div>
+    <br>
 @endsection
