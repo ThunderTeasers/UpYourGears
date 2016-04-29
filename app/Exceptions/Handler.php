@@ -51,12 +51,12 @@ class Handler extends ExceptionHandler
             switch($e->getStatusCode()){
                 case '404':
                     Log::error($e);
-                    return Response::view('errors.404');
+                    return Response::view('errors.404', [], 404);
                     break;
 
                 case '500':
                     Log::error($e);
-                    return Response::view('errors.503');
+                    return Response::view('errors.503', [], 503);
                     break;
 
                 default:
