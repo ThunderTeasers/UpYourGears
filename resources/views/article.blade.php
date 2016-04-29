@@ -5,14 +5,18 @@
 @section('meta_keywords'){{ $article->meta_keywords }}@endsection
 
 @section('content')
-    <div class="clear">
+    <div class="clear" itemscope itemtype="http://schema.org/BlogPosting">
         <div class="page-header">
-            <span class="h1">{{ $article->title }}</span>
+            <span class="h1" itemprop="headline">{{ $article->title }}</span>
             <span class="date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}</span>
         </div>
         <div class="page-description">
-            {!! $article->description !!}
-            {!! $article->body !!}
+            <div itemprop="description">
+                {!! $article->description !!}
+            </div>
+            <div itemprop="articleBody">
+                {!! $article->body !!}
+            </div>
         </div>
     </div>
 
