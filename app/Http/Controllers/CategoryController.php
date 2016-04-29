@@ -16,7 +16,7 @@ class CategoryController extends Controller{
      * @return mixed
      */
     public function getHome(){
-        $articles = Article::whereIn('category_id', [2])->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
+        $articles = Article::whereIn('category_id', [2, 7, 8, 9, 10])->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
         $news = Article::where('category_id', 3)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
         $blog = Article::where('category_id', 4)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
 
