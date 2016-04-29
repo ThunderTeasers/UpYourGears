@@ -10,7 +10,9 @@
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>
-    {{ URL::forceSchema('https') }}
+    @if(!\Illuminate\Support\Facades\App::isLocal())
+        {{ URL::forceSchema('https') }}
+    @endif
 
     <div id="wrapper">
         @include('includes.navbar')
