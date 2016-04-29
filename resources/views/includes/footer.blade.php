@@ -1,5 +1,5 @@
 <footer>
     <div class="container">
-        123
+        <span>&copy; 2015-2016 UpYourGears.ru</span>
     </div>
 </footer>
