@@ -6,6 +6,7 @@
 
 @section('content')
     <div itemscope itemtype="http://schema.org/Blog">
+        <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
             <span class="h1" itemprop="name">{{ $category->title }}</span>
         </div>

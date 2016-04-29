@@ -11,6 +11,11 @@
 @endsection
 
 @section('content')
+    <div itemscope itemtype="http://schema.org/Article">
+        <meta itemprop="inLanguage" content="ru-RU"/>
+        <meta itemprop="description" content="Все, что Вы хотели бы знать о технологиях!"/>
+    </div>
+
     <span class="h1 page-header">Последние статьи</span>
     @foreach($articles as $article)
         <div class="clear">
