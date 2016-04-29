@@ -15,7 +15,7 @@
     @include('includes.navbar')
     <div class="container clear" id="wrapper">
         @include('includes.header')
-        <aside id="left-side">
+        <aside id="left-side" class="clear">
             @if(!Request::is('/'))
                 @include('includes.breadcrumbs')
             @endif

@@ -17,6 +17,14 @@
   }
 }
 
+body{
+  height: 100%;
+}
+
+#wrapper{
+  min-height: 100%;
+}
+
 #right-side{
   float: left;
   width: 25%;
@@ -39,6 +47,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 12px 0;
   color: $second-text-color;
+}
+
+.normal-pre{
+  border: 1px solid $third-color;
+  color: $text-color;
+  background-color: $first-color;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .h1{
