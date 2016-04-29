@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title')
+@section('meta_title')
     Ошибочка 404!
 @endsection
 
