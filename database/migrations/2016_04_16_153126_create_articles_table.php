@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->text('description');
             $table->text('body');
             $table->string('slug');
+            $table->boolean('is_published')->unsinged();
             $table->integer('category_id')->unsinged();
             $table->integer('user_id')->unsinged();
             $table->string('meta_title')->nullable();

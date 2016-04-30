@@ -16,9 +16,9 @@ class CategoryController extends Controller{
      * @return mixed
      */
     public function getHome(){
-        $articles = Article::whereIn('category_id', [2, 7, 8, 9, 10])->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
-        $news = Article::where('category_id', 3)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
-        $blog = Article::where('category_id', 4)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
+        $articles = Article::whereIn('category_id', [2, 7, 8, 9, 10])->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
+        $news = Article::where('category_id', 3)->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
+        $blog = Article::where('category_id', 4)->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(2)->get();
 
         return view('home', ['articles' => $articles, 'news' => $news, 'blog' => $blog]);
     }
@@ -184,7 +184,7 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
+        $articles = $category->articles()->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Новости', '/news');
@@ -203,7 +203,7 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
+        $articles = $category->articles()->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Блог', '/blog');
@@ -222,7 +222,7 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $articles = $category->articles()->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
+        $articles = $category->articles()->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Сайты', '/sites');
@@ -261,7 +261,7 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $articles = $category->articles()->select(['id', 'title', 'description', 'category_id', 'created_at', 'slug'])->orderBy('created_at', 'DESC')->paginate(5);
+        $articles = $category->articles()->where('is_published', 1)->select(['id', 'title', 'description', 'category_id', 'created_at', 'slug'])->orderBy('created_at', 'DESC')->paginate(5);
 
         $parent = $category->parent()->first();
 
