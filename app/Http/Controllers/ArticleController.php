@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\Breadcrumbs;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
@@ -76,14 +77,16 @@ class ArticleController extends Controller{
     public function getOneForAdmin($post_id){
         $article = Article::find($post_id);
         $categories = Category::all();
+        $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.article.one', ['article' => $article, 'categories' => $categories]);
+        return view('dashboard.article.one', ['article' => $article, 'categories' => $categories, 'tags' => $tags]);
     }
 
     public function getCreate(){
         $categories = Category::all();
+        $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.article.create', ['categories' => $categories]);
+        return view('dashboard.article.create', ['categories' => $categories, 'tags' => $tags]);
     }
     
     public function postOneForAdmin(Request $request){
@@ -114,6 +117,7 @@ class ArticleController extends Controller{
         $article->meta_description = $request['meta_description'];
         $article->meta_keywords = $request['meta_keywords'];
         $article->save();
+        $article->tags()->attach($request['tags']);
 
         return redirect()->route('dashboard.articles');
     }

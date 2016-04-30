@@ -32,6 +32,10 @@
             {!! Form::text('slug', null, ['required']) !!}
         </div>
         <div class="form-group">
+            {!! Form::label('tags', 'Tags') !!}
+            {!! Form::select('tags[]', $tags, null, ['multiple']) !!}
+        </div>
+        <div class="form-group">
             {!! Form::label('meta_title', 'Мета тайтл') !!}
             {!! Form::text('meta_title', null) !!}
         </div>
