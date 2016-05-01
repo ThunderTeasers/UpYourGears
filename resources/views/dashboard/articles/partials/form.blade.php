@@ -12,15 +12,11 @@
 </div>
 <div class="form-group">
     {!! Form::label('category_id', 'Родительская категория') !!}
-    <select name="category_id" id="category_id">
-        @foreach($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->title }}</option>
-        @endforeach
-    </select>
+    {!! Form::select('category_id', $categories, null) !!}
 </div>
 <div class="form-group">
     {!! Form::label('created_at', 'Дата создания') !!}
-    {!! Form::date('created_at', date('Y-m-d'), ['required', 'class' => 'form-control']) !!}
+    {!! Form::date('created_at', $article->created_at, ['required', 'class' => 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('slug', 'Slug') !!}

@@ -26,8 +26,17 @@ class Article extends Model{
         'updated_at'
     ];
 
+    /**
+     * Scope to quick check if article is published
+     *
+     * @param $query
+     */
     public function scopeIsPublished($query){
         $query->where('is_published', 1);
+    }
+
+    public function getCreatedAtAttribute($date){
+        return Carbon::parse($date)->format('Y-m-d');
     }
 
     /**

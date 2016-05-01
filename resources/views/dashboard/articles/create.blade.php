@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        {!! Form::open(['method'=> 'POST', 'route' => 'dashboard.articles.store']) !!}
+        {!! Form::model($article = new \App\Models\Article, ['method'=> 'POST', 'route' => 'dashboard.articles.store']) !!}
             @include('dashboard.articles.partials.form')
             {!! Form::submit('Сохранить', ['class' => 'button']) !!}
         {!! Form::close() !!}

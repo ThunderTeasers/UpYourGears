@@ -28,7 +28,7 @@ class ArticleController extends Controller{
      * @return View
      */
     public function create(){
-        $categories = Category::select(['id', 'title'])->get();
+        $categories = Category::lists('title', 'id');
         $tags = Tag::lists('title', 'id');
 
         return view('dashboard.articles.create', compact('categories', 'tags'));
@@ -42,7 +42,7 @@ class ArticleController extends Controller{
      */
     public function store(Request $request){
         $article = Article::create($request->all());
-        $article->tags()->attach($request['tag_list']);
+        $this->syncTags($article, $request['tag_list']);
 
         return redirect()->route('dashboard.articles.index');
     }
@@ -54,7 +54,7 @@ class ArticleController extends Controller{
      * @return View - with data of article and possibility to change it
      */
     public function show(Article $article){
-        $categories = Category::select(['id', 'title'])->get();
+        $categories = Category::lists('title', 'id');
         $tags = Tag::lists('title', 'id');
 
         return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
@@ -67,7 +67,7 @@ class ArticleController extends Controller{
      * @return View - with data of article and possibility to change it
      */
     public function edit(Article $article){
-        $categories = Category::select(['id', 'title'])->get();
+        $categories = Category::lists('title', 'id');
         $tags = Tag::lists('title', 'id');
 
         return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
@@ -82,7 +82,7 @@ class ArticleController extends Controller{
      */
     public function update(Article $article, Request $request){
         $article->update($request->all());
-        $article->tags()->sync($request['tag_list']);
+        $this->syncTags($article, $request['tag_list']);
 
         return redirect()->back();
     }
@@ -98,5 +98,15 @@ class ArticleController extends Controller{
         $article->delete();
 
         return redirect()->back();
+    }
+
+    /**
+     * Sync up the list of tags in the database
+     *
+     * @param Article $article
+     * @param array $tags
+     */
+    private function syncTags(Article $article, array $tags){
+        $article->tags()->sync($tags);
     }
 }
