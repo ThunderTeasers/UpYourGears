@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        {!! Form::model($user, ['method' => 'PATCH', 'route' => ['dashboard.users.update', $user->id]]) !!}
+        {!! Form::model($user, ['method' => 'PATCH', 'route' => ['dashboard.users.update', $user->id], 'enctype' => 'multipart/form-data']) !!}
             {!! Form::hidden('id', $user->id) !!}
             @include('dashboard.users.partials.form')
             {!! Form::submit('Сохранить') !!}
