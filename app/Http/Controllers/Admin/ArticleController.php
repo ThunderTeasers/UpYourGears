@@ -50,11 +50,10 @@ class ArticleController extends Controller{
     /**
      * Show one article(not needed by now, but maybe sometime...)
      *
-     * @param $id - of article to find and display
+     * @param Article $article
      * @return View - with data of article and possibility to change it
      */
-    public function show($id){
-        $article = Article::findOrFail($id);
+    public function show(Article $article){
         $categories = Category::select(['id', 'title'])->get();
         $tags = Tag::lists('title', 'id');
 
@@ -64,11 +63,10 @@ class ArticleController extends Controller{
     /**
      * Show one article with ability to edit and save it
      *
-     * @param $id - of article to find and display
+     * @param Article $article
      * @return View - with data of article and possibility to change it
      */
-    public function edit($id){
-        $article = Article::findOrFail($id);
+    public function edit(Article $article){
         $categories = Category::select(['id', 'title'])->get();
         $tags = Tag::lists('title', 'id');
 
@@ -78,12 +76,12 @@ class ArticleController extends Controller{
     /**
      * Update article
      *
-     * @param $id - of article to find and update
+     * @param Article $article
      * @param Request $request
      * @return mixed
      */
-    public function update($id, Request $request){
-        Article::findOrFail($id)->update($request->all());
+    public function update(Article $article, Request $request){
+        $article->update($request->all());
 
         return redirect()->back();
     }
@@ -91,11 +89,12 @@ class ArticleController extends Controller{
     /**
      * Delete one article by 'id'
      *
-     * @param $id - of article to find and delete
+     * @param Article $article
      * @return mixed
+     * @throws \Exception
      */
-    public function destroy($id){
-        Article::findOrFail($id)->delete();
+    public function destroy(Article $article){
+        $article->delete();
 
         return redirect()->back();
     }

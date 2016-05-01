@@ -46,11 +46,10 @@ class CategoryController extends Controller{
     /**
      * Show one category(not needed by now, but maybe sometime...)
      *
-     * @param $id - of category to find and display
+     * @param Category $category
      * @return View - with data of category and possibility to change it
      */
-    public function show($id){
-        $article = Category::findOrFail($id);
+    public function show(Category $category){
         $categories = Category::select(['id', 'title'])->get();
         $tags = Tag::lists('title', 'id');
 
@@ -60,25 +59,24 @@ class CategoryController extends Controller{
     /**
      * Show one category with ability to edit and save it
      *
-     * @param $id - of category to find and display
+     * @param Category $category
      * @return View - with data of category and possibility to change it
      */
-    public function edit($id){
-        $category = Category::findOrFail($id);
+    public function edit(Category $category){
         $parent_categories = Category::select(['id', 'title'])->get();
 
         return view('dashboard.categories.edit', compact('category', 'parent_categories'));
     }
-    
+
     /**
      * Update category
      *
-     * @param $id - of category to find and update
+     * @param Category $category
      * @param Request $request
      * @return mixed
      */
-    public function update($id, Request $request){
-        Category::findOrFail($id)->update($request->all());
+    public function update(Category $category, Request $request){
+        $category->update($request->all());
 
         return redirect()->back();
     }
@@ -86,11 +84,12 @@ class CategoryController extends Controller{
     /**
      * Delete one category by 'id'
      *
-     * @param $id - of category to find and delete
+     * @param Category $category
      * @return mixed
+     * @throws \Exception
      */
-    public function destroy($id){
-        Category::findOrFail($id)->delete();
+    public function destroy(Category $category){
+        $category->delete();
 
         return redirect()->back();
     }
