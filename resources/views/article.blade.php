@@ -10,9 +10,9 @@
         <div class="page-header">
             <span class="h1" itemprop="headline">{{ $article->title }}</span>
             @unless($article->tags->isEmpty())
-                <ul>
+                <ul class="tags clear">
                     @foreach($article->tags as $tag)
-                        <li>{{ $tag->title }}</li>
+                        <li><a href="">{{ $tag->title }}</a></li>
                     @endforeach
                 </ul>
             @endunless

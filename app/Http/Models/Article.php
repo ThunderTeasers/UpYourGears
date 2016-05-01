@@ -65,4 +65,13 @@ class Article extends Model{
     public function comments(){
         return $this->hasMany('App\Models\Comment');
     }
+
+    /**
+     * Get a list of tag ids associated with the current article
+     *
+     * @return array
+     */
+    public function getTagListAttribute(){
+        return $this->tags->lists('id')->all();
+    }
 }
