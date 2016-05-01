@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class UserController extends Controller{
@@ -69,7 +71,16 @@ class UserController extends Controller{
      * @return mixed
      */
     public function update(User $user, Request $request){
-        $user->update($request->all());
+        $file = $request->file('image');
+        if($file){
+            $filename = 'profiles/'.$request['username'].'.'.$file->getClientOriginalExtension();
+            Storage::disk('uploads')->put($filename, File::get($file));
+            $user->image = $filename;
+        }
+
+        $user->username = $request['username'];
+        $user->email = $request['email'];
+        $user->update();
 
         return redirect()->back();
     }
