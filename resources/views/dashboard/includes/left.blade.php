@@ -1,6 +1,6 @@
 <aside id="left">
     <div id="user">
-        <img class="media-object img-thumbnail user-img" src="{{ URL::asset('storage/app/public/user.jpg') }}">
+        <img class="media-object img-thumbnail user-img" src="{{ URL::asset('/public/images/profiles/admin.jpg') }}">
         <div id="user__body">
             <span id="user__username">{{ Auth::user()->username }}</span>
             <ul id="user__info">
