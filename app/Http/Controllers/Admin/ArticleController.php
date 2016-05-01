@@ -12,12 +12,12 @@ use Illuminate\View\View;
 
 class ArticleController extends Controller{
     /**
-     * Show all articles(latest -> first)
+     * Show all articles
      *
      * @return View with table witch contains all articles
      */
     public function index(){
-        $articles = Article::select(['id', 'title', 'category_id', 'created_at'])->get();
+        $articles = Article::select(['id', 'title', 'category_id'])->get();
 
         return view('dashboard.articles.index', compact('articles'));
     }
@@ -75,9 +75,15 @@ class ArticleController extends Controller{
         return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
     }
 
+    /**
+     * Update article
+     *
+     * @param $id - of article to find and update
+     * @param Request $request
+     * @return mixed
+     */
     public function update($id, Request $request){
-        $article = Article::findOrFail($id);
-        $article->update($request->all());
+        Article::findOrFail($id)->update($request->all());
 
         return redirect()->back();
     }
@@ -85,11 +91,11 @@ class ArticleController extends Controller{
     /**
      * Delete one article by 'id'
      *
-     * @param $id - of article to find and display
+     * @param $id - of article to find and delete
      * @return mixed
      */
     public function destroy($id){
-        Article::find($id)->delete();
+        Article::findOrFail($id)->delete();
 
         return redirect()->back();
     }

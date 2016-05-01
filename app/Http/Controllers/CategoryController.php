@@ -92,7 +92,7 @@ class CategoryController extends Controller{
     public function getCategoryForAdmin($category_id){
         $category = Category::find($category_id);
 
-        $categories = Category::where('id', '!=', $category_id)->get();
+        $parent_categories = Category::where('id', '!=', $category_id)->get();
 
         return view('dashboard.category.one', ['category' => $category, 'categories' => $categories]);
     }

@@ -1,6 +1,6 @@
 @extends('layouts.dashboard')
 
-@section('title')
+@section('meta_title')
     Список категорий
 @endsection
 
@@ -24,8 +24,8 @@
                 @endif
             </td>
             <td class="center">
-                <a class="table__view" href="/dashboard/categories/{{ $category->id }}">Изменить</a> |
-                {!! \App\Helpers\Helpers::delete_form(['dashboard.categories.delete', $category->id]) !!}
+                <a class="table__view" href="/dashboard/categories/{{ $category->id }}/edit">Изменить</a> |
+                {!! \App\Helpers\Helpers::delete_form(['dashboard.categories.destroy', $category->id]) !!}
             </td>
         </tr>
     @endforeach

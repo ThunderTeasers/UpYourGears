@@ -39,6 +39,7 @@ Route::post('/search', [
  */
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function(){
     Route::resource('dashboard/articles', 'ArticleController');
+    Route::resource('dashboard/categories', 'CategoryController');
 });
 
 /**
@@ -59,56 +60,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::get('/dashboard/logout', [
         'uses' => 'UserController@getLogout',
         'as' => 'user.logout'
-    ]);
-
-
-    /**
-     * Getting all categories in table with ability to change or delete them
-     */
-    Route::get('/dashboard/categories', [
-        'uses' => 'CategoryController@getCategoriesForAdmin',
-        'as' => 'dashboard.categories.list'
-    ]);
-
-    /**
-     * View with blank inputs for creating new one article
-     */
-    Route::get('/dashboard/categories/create', [
-        'uses' => 'CategoryController@getCategoryCreate',
-        'as' => 'dashboard.categories.create'
-    ]);
-
-    /**
-     * Getting one category by 'id'
-     */
-    Route::get('/dashboard/categories/{category_id}', [
-        'uses' => 'CategoryController@getCategoryForAdmin',
-        'as' => 'dashboard.categories.one'
-    ]);
-
-    /**
-     * Create a new category
-     */
-    Route::post('/dashboard/categories/create', [
-        'uses' => 'CategoryController@postCategoryCreate',
-        'as' => 'dashboard.categories.create'
-    ]);
-
-    /**
-     * Delete category
-     */
-    Route::delete('/dashboard/categories/delete/{category_id}', [
-        'uses' => 'CategoryController@deleteCategory',
-        'as' => 'dashboard.categories.delete',
-        'https' => true
-    ]);
-
-    /**
-     * Update a category
-     */
-    Route::post('/dashboard/categories/update', [
-        'uses' => 'CategoryController@postCategoryUpdate',
-        'as' => 'dashboard.categories.update'
     ]);
 });
 
