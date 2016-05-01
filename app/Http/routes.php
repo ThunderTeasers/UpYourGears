@@ -57,7 +57,7 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
      * Getting all articles in table with ability to change or delete them
      */
     Route::get('/dashboard/articles', [
-        'uses' => 'ArticleController@getAll',
+        'uses' => 'ArticleController@all',
         'as' => 'dashboard.articles'
     ]);
 

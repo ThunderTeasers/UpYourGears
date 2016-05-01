@@ -5,6 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model{
+    protected $fillable = [
+        'title',
+        'description',
+        'body',
+        'slug',
+        'is_published',
+        'category_id',
+        'user_id',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+        'created_at',
+        'updated_at'
+    ];
+
     /**
      * Return relation to the user
      *

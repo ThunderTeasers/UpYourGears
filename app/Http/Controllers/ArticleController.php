@@ -6,11 +6,44 @@ use App\Helpers\Breadcrumbs;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
+use Illuminate\View\View;
 
 class ArticleController extends Controller{
+    //==============================================================//
+    //                     ADMIN FUNCTIONS                          //
+    //==============================================================//
+
+    /**
+     * Create new article by data from request
+     *
+     * @param Request $request
+     * @return mixed
+     */
+    public function store(Request $request){
+        Article::create($request->all());
+
+        return redirect('user.dashboard');
+    }
+
+    /**
+     * Show all articles(latest -> first)
+     *
+     * @return View with table witch contains all articles
+     */
+    public function all(){
+        $articles = Article::select(['id', 'title', 'category_id', 'created_at'])->get();
+
+        return view('dashboard.article.list', compact('articles'));
+    }
+
+    //==============================================================//
+    //                      USER FUNCTIONS                          //
+    //==============================================================//
+
     /**
      * Search data from titles and render it
      *
