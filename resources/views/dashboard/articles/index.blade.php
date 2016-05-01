@@ -14,8 +14,8 @@
             <td>{{ $article->title }}</td>
             <td class="center">{{ $article->category()->first()['title'] }}</td>
             <td class="center">
-                <a class="table__view" href="/dashboard/articles/{{ $article->id }}">Изменить</a> |
-                {!! \App\Helpers\Helpers::delete_form(['dashboard.article.delete', $article->id]) !!}
+                <a class="table__view" href="/dashboard/articles/{{ $article->id }}/edit">Изменить</a> |
+                {!! \App\Helpers\Helpers::delete_form(['dashboard.articles.destroy', $article->id]) !!}
             </td>
         </tr>
     @endforeach

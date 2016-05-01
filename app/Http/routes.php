@@ -38,18 +38,7 @@ Route::post('/search', [
  * Admin group
  */
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function(){
-    /**
-     * Blank inputs for creating new one article
-     */
-    Route::get('/dashboard/articles/{id}', 'ArticleController@show')->where('id', '[0-9]+');
-
-    /**
-     * All articles in table with ability to change or delete them
-     */
-    Route::get('/dashboard/articles', [
-        'uses' => 'ArticleController@all',
-        'as' => 'dashboard.articles'
-    ]);
+    Route::resource('dashboard/articles', 'ArticleController');
 });
 
 /**
@@ -72,39 +61,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         'as' => 'user.logout'
     ]);
 
-
-
-    /**
-     * View with blank inputs for creating new one article
-     */
-    Route::get('/dashboard/articles/create', [
-        'uses' => 'ArticleController@getCreate',
-        'as' => 'dashboard.articles.create'
-    ]);
-
-    /**
-     * Create new article
-     */
-    Route::post('/dashboard/articles/create', [
-        'uses' => 'ArticleController@postCreate',
-        'as' => 'dashboard.article.create'
-    ]);
-
-    /**
-     * Delete article
-     */
-    Route::delete('/dashboard/articles/delete/{article_id}', [
-        'uses' => 'ArticleController@deleteOne',
-        'as' => 'dashboard.article.delete'
-    ]);
-
-    /**
-     * Update article after changing
-     */
-    Route::post('/dashboard/articles/update', [
-        'uses' => 'ArticleController@postOneForAdmin',
-        'as' => 'dashboard.article.update'
-    ]);
 
     /**
      * Getting all categories in table with ability to change or delete them

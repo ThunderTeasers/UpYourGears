@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        {!! Form::open(['route' => 'dashboard.article.create']) !!}
+        {!! Form::open(['method'=> 'POST', 'route' => 'dashboard.articles.store']) !!}
         <div class="form-group">
             {!! Form::label('title', 'Название') !!}
             {!! Form::text('title', null, ['required', 'class' => 'form-control']) !!}

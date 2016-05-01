@@ -12,30 +12,43 @@ use Illuminate\View\View;
 
 class ArticleController extends Controller{
     /**
-     * Create new article by data from request
+     * Show all articles(latest -> first)
+     *
+     * @return View with table witch contains all articles
+     */
+    public function index(){
+        $articles = Article::select(['id', 'title', 'category_id', 'created_at'])->get();
+
+        return view('dashboard.articles.index', compact('articles'));
+    }
+
+    /**
+     * Show blank inputs for article creation
+     *
+     * @return View
+     */
+    public function create(){
+        $categories = Category::select(['id', 'title'])->get();
+        $tags = Tag::lists('title', 'id');
+
+        return view('dashboard.articles.create', compact('categories', 'tags'));
+    }
+
+    /**
+     * Save a new article with data from request
      *
      * @param Request $request
      * @return mixed
      */
     public function store(Request $request){
-        Article::create($request->all());
+        $article = Article::create($request->all());
+        $article->tags()->attach($request['tags']);
 
-        return redirect('user.dashboard');
+        return redirect()->route('dashboard.articles.index');
     }
 
     /**
-     * Show all articles(latest -> first)
-     *
-     * @return View with table witch contains all articles
-     */
-    public function all(){
-        $articles = Article::select(['id', 'title', 'category_id', 'created_at'])->get();
-
-        return view('dashboard.article.list', compact('articles'));
-    }
-
-    /**
-     * Show one article
+     * Show one article(not needed by now, but maybe sometime...)
      *
      * @param $id - of article to find and display
      * @return View - with data of article and possibility to change it
@@ -45,6 +58,39 @@ class ArticleController extends Controller{
         $categories = Category::select(['id', 'title'])->get();
         $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.article.one', compact('article', 'categories', 'tags'));
+        return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
+    }
+
+    /**
+     * Show one article with ability to edit and save it
+     *
+     * @param $id - of article to find and display
+     * @return View - with data of article and possibility to change it
+     */
+    public function edit($id){
+        $article = Article::findOrFail($id);
+        $categories = Category::select(['id', 'title'])->get();
+        $tags = Tag::lists('title', 'id');
+
+        return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
+    }
+
+    public function update($id, Request $request){
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+
+        return redirect()->back();
+    }
+
+    /**
+     * Delete one article by 'id'
+     *
+     * @param $id - of article to find and display
+     * @return mixed
+     */
+    public function destroy($id){
+        Article::find($id)->delete();
+
+        return redirect()->back();
     }
 }

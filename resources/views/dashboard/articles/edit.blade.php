@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-        {!! Form::open(['route' => 'dashboard.article.update']) !!}
+        {!! Form::model($article, ['method' => 'PATCH', 'route' => ['dashboard.articles.update', $article->id]]) !!}
             {!! Form::hidden('id', $article->id) !!}
             <div class="form-group">
                 {!! Form::label('title', 'Название') !!}
