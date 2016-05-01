@@ -300,6 +300,7 @@ class ComposerStaticInitd97a39bf243abc9a9d5ccd230d95ba5f
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Helpers\\Breadcrumbs' => __DIR__ . '/../..' . '/app/Http/Helpers/Breadcrumbs.php',
         'App\\Helpers\\Helpers' => __DIR__ . '/../..' . '/app/Http/Helpers/helpers.php',
+        'App\\Http\\Controllers\\Admin\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ArticleController.php',
         'App\\Http\\Controllers\\ArticleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ArticleController.php',
         'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\CommentsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentsController.php',

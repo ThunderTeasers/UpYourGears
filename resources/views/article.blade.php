@@ -9,6 +9,13 @@
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
             <span class="h1" itemprop="headline">{{ $article->title }}</span>
+            @unless($article->tags->isEmpty())
+                <ul>
+                    @foreach($article->tags as $tag)
+                        <li>{{ $tag->title }}</li>
+                    @endforeach
+                </ul>
+            @endunless
             <span class="date">
                 <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
                 {{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}

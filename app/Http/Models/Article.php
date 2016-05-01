@@ -2,9 +2,15 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model{
+    /**
+     * Fillable values on database table
+     *
+     * @var array
+     */
     protected $fillable = [
         'title',
         'description',
@@ -19,6 +25,10 @@ class Article extends Model{
         'created_at',
         'updated_at'
     ];
+
+    public function scopeIsPublished($query){
+        $query->where('is_published', 1);
+    }
 
     /**
      * Return relation to the user

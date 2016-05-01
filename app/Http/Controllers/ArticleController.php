@@ -6,7 +6,6 @@ use App\Helpers\Breadcrumbs;
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\App;
@@ -39,6 +38,7 @@ class ArticleController extends Controller{
 
         return view('dashboard.article.list', compact('articles'));
     }
+
 
     //==============================================================//
     //                      USER FUNCTIONS                          //
@@ -99,20 +99,6 @@ class ArticleController extends Controller{
         $comments = $article->comments()->get();
 
         return view('article', ['article' => $article, 'breadcrumbs' => $breadcrumbs, 'comments' => $comments]);
-    }
-
-    public function getAll(){
-        $articles = Article::all();
-
-        return view('dashboard.article.list', ['articles' => $articles]);
-    }
-
-    public function getOneForAdmin($post_id){
-        $article = Article::find($post_id);
-        $categories = Category::all();
-        $tags = Tag::lists('title', 'id');
-
-        return view('dashboard.article.one', ['article' => $article, 'categories' => $categories, 'tags' => $tags]);
     }
 
     public function getCreate(){

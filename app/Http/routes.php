@@ -33,6 +33,25 @@ Route::post('/search', [
     'https' => true
 ]);
 
+
+/**
+ * Admin group
+ */
+Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function(){
+    /**
+     * Blank inputs for creating new one article
+     */
+    Route::get('/dashboard/articles/{id}', 'ArticleController@show')->where('id', '[0-9]+');
+
+    /**
+     * All articles in table with ability to change or delete them
+     */
+    Route::get('/dashboard/articles', [
+        'uses' => 'ArticleController@all',
+        'as' => 'dashboard.articles'
+    ]);
+});
+
 /**
  * Admin group
  */
@@ -53,13 +72,7 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         'as' => 'user.logout'
     ]);
 
-    /**
-     * Getting all articles in table with ability to change or delete them
-     */
-    Route::get('/dashboard/articles', [
-        'uses' => 'ArticleController@all',
-        'as' => 'dashboard.articles'
-    ]);
+
 
     /**
      * View with blank inputs for creating new one article
@@ -83,14 +96,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
     Route::delete('/dashboard/articles/delete/{article_id}', [
         'uses' => 'ArticleController@deleteOne',
         'as' => 'dashboard.article.delete'
-    ]);
-
-    /**
-     * Getting one article by 'id'
-     */
-    Route::get('/dashboard/articles/{article_id}', [
-        'uses' => 'ArticleController@getOneForAdmin',
-        'as' => 'dashboard.article'
     ]);
 
     /**
