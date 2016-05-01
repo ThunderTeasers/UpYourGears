@@ -24,7 +24,7 @@
                 @endif
             </td>
             <td class="center">
-                <a class="table__view" href="/dashboard/categories/{{ $category->id }}/edit">Изменить</a> |
+                <a class="table__view" href="{{ URL::route('dashboard.categories.edit', $category->id) }}">Изменить</a> |
                 {!! \App\Helpers\Helpers::delete_form(['dashboard.categories.destroy', $category->id]) !!}
             </td>
         </tr>
