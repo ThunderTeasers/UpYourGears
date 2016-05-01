@@ -8,12 +8,7 @@
 </div>
 <div class="form-group">
     {!! Form::label('parent_id', 'Родительская категория') !!}
-    <select name="parent_id" id="parent_id">
-        <option value="0">Корневая</option>
-        @foreach($parent_categories as $parent_category)
-            <option value="{{ $parent_category->id }}">{{ $parent_category->title }}</option>
-        @endforeach
-    </select>
+    {!! Form::select('parent_id', $parent_categories, null) !!}
 </div>
 <div class="form-group">
     {!! Form::label('slug', 'Slug') !!}

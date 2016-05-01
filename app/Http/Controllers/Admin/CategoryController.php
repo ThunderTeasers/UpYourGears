@@ -26,7 +26,8 @@ class CategoryController extends Controller{
      * @return View
      */
     public function create(){
-        $parent_categories = Category::select(['id', 'title'])->get();
+        $parent_categories = Category::lists('title', 'id');
+        $parent_categories->prepend('Корневая');
 
         return view('dashboard.categories.create', compact('parent_categories'));
     }
@@ -63,7 +64,8 @@ class CategoryController extends Controller{
      * @return View - with data of category and possibility to change it
      */
     public function edit(Category $category){
-        $parent_categories = Category::select(['id', 'title'])->get();
+        $parent_categories = Category::lists('title', 'id');
+        $parent_categories->prepend('Корневая');
 
         return view('dashboard.categories.edit', compact('category', 'parent_categories'));
     }
