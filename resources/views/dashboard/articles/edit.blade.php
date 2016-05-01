@@ -10,15 +10,15 @@
             {!! Form::hidden('id', $article->id) !!}
             <div class="form-group">
                 {!! Form::label('title', 'Название') !!}
-                {!! Form::text('title', $article->title, ['required', 'class' => 'form-control']) !!}
+                {!! Form::text('title', null, ['required', 'class' => 'form-control']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('description', 'Описание', ['class' => 'control-label']) !!}
-                {!! Form::textarea('description', $article->description, ['required', 'class' => 'form-control']) !!}
+                {!! Form::textarea('description', null, ['required', 'class' => 'form-control']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('body', 'Текст') !!}
-                {!! Form::textarea('body', $article->body, ['class' => 'form-control']) !!}
+                {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('category_id', 'Родительская категория') !!}
@@ -34,11 +34,11 @@
             </div>
             <div class="form-group">
                 {!! Form::label('created_at', 'Дата создания') !!}
-                {!! Form::date('created_at', $article->created_at, ['required', 'class' => 'form-control']) !!}
+                {!! Form::date('created_at', null, ['required', 'class' => 'form-control']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('slug', 'Slug') !!}
-                {!! Form::text('slug', $article->slug, ['required']) !!}
+                {!! Form::text('slug', null, ['required']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('tags', 'Tags') !!}
@@ -46,15 +46,15 @@
             </div>
             <div class="form-group">
                 {!! Form::label('meta_title', 'Мета тайтл') !!}
-                {!! Form::text('meta_title', $article->meta_title) !!}
+                {!! Form::text('meta_title', null) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('meta_description', 'Мета описание') !!}
-                {!! Form::text('meta_description', $article->meta_description) !!}
+                {!! Form::text('meta_description', null) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('meta_keywords', 'Мета ключевые слова') !!}
-                {!! Form::text('meta_keywords', $article->meta_keywords) !!}
+                {!! Form::text('meta_keywords', null) !!}
             </div>
             {!! Form::submit('Сохранить') !!}
         {!! Form::close() !!}

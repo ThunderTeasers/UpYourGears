@@ -30,6 +30,4 @@
             </div>
         </div>
     </div>
-
-    {{--@include('includes.comments')--}}
 @endsection

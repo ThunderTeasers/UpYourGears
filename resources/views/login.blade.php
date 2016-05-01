@@ -13,15 +13,7 @@
 
     <div class="login-wrapper">
         {!! Form::open() !!}
-            @if(count($errors) > 0)
-                <div class="danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('errors.list')
 
             {!! Form::text('username', null, array('required', 'placeholder' => 'Имя пользователя')) !!}
             {!! Form::password('password', array('required', 'placeholder' => 'Пароль')) !!}
