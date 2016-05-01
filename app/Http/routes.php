@@ -40,6 +40,7 @@ Route::post('/search', [
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function(){
     Route::resource('dashboard/articles', 'ArticleController');
     Route::resource('dashboard/categories', 'CategoryController');
+    Route::resource('dashboard/tags', 'TagController');
 });
 
 /**

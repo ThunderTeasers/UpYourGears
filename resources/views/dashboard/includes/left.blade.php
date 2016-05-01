@@ -14,10 +14,10 @@
             <a><span class="link-title">Статьи</span></a>
             <ul class="collapse">
                 <li>
-                    <a href="/dashboard/articles/create">Создать</a>
+                    <a href="{{ URL::route('dashboard.articles.create') }}">Создать</a>
                 </li>
                 <li>
-                    <a href="/dashboard/articles">Лист</a>
+                    <a href="{{ URL::route('dashboard.articles.index') }}">Лист</a>
                 </li>
             </ul>
         </li>
@@ -25,10 +25,21 @@
             <a><span class="link-title">Категории</span></a>
             <ul class="collapse">
                 <li>
-                    <a href="/dashboard/categories/create">Создать</a>
+                    <a href="{{ URL::route('dashboard.categories.create') }}">Создать</a>
                 </li>
                 <li>
-                    <a href="/dashboard/categories">Лист</a>
+                    <a href="{{ URL::route('dashboard.categories.index') }}">Лист</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a><span class="link-title">Теги</span></a>
+            <ul class="collapse">
+                <li>
+                    <a href="{{ URL::route('dashboard.tags.create') }}">Создать</a>
+                </li>
+                <li>
+                    <a href="{{ URL::route('dashboard.tags.index') }}">Лист</a>
                 </li>
             </ul>
         </li>
