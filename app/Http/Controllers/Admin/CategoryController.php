@@ -26,9 +26,9 @@ class CategoryController extends Controller{
      * @return View
      */
     public function create(){
-        $categories = Category::select(['id', 'title'])->get();
+        $parent_categories = Category::select(['id', 'title'])->get();
 
-        return view('dashboard.categories.create', compact('categories'));
+        return view('dashboard.categories.create', compact('parent_categories'));
     }
 
     /**
