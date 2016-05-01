@@ -41,6 +41,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], functi
     Route::resource('dashboard/articles', 'ArticleController');
     Route::resource('dashboard/categories', 'CategoryController');
     Route::resource('dashboard/tags', 'TagController');
+    Route::resource('dashboard/users', 'UserController');
 });
 
 /**

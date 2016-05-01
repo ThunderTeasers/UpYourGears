@@ -43,5 +43,16 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a><span class="link-title">Пользователи</span></a>
+            <ul class="collapse">
+                <li>
+                    <a href="{{ URL::route('dashboard.users.create') }}">Создать</a>
+                </li>
+                <li>
+                    <a href="{{ URL::route('dashboard.users.index') }}">Лист</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </aside>

@@ -9,6 +9,23 @@ class User extends Model implements Authenticatable{
     use \Illuminate\Auth\Authenticatable;
 
     /**
+     * Fillable values on database table
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'is_admin',
+        'is_published',
+        'image',
+        'created_at',
+        'updated_at',
+        'remember_token'
+    ];
+
+    /**
      * Getting user articles
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
