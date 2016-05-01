@@ -1,5 +1,9 @@
 @extends('layouts.dashboard')
 
+@section('meta_title')
+    Список статей
+@endsection
+
 @section('content')
     <table>
         <tr>
