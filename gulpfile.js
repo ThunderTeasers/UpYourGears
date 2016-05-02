@@ -24,5 +24,9 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
+    mix.sass('user.scss');
+});
+
+elixir(function(mix) {
     mix.scripts(['jquery-2.2.3.min.js', 'jquery.fancybox.pack.js', 'prettify.js', 'dropdown-menu.js', 'spoiler.js', 'fancybox.js']);
 });

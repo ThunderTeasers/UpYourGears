@@ -75,8 +75,8 @@ class UserController extends Controller{
      *
      * @return mixed
      */
-    public function getSettings(){
-        return view('user.settings', ['user' => 'sdf']);
+    public function settings(){
+        return view('user.index', ['user' => Auth::user()]);
     }
 
     /**

@@ -73,8 +73,8 @@ Route::group(['middleware' => ['auth']], function(){
      * User settings
      */
     Route::get('/user', [
-        'uses' => 'UserController@getSettings',
-        'as' => 'user.settings'
+        'uses' => 'UserController@settings',
+        'as' => 'user.index'
     ]);
 
     /**
