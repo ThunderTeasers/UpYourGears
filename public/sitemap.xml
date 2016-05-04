@@ -25,16 +25,16 @@
         <loc>https://upyourgears.ru/blog</loc>
     </url>
     <url>
+        <loc>https://upyourgears.ru/articles/web-developers/setup-vhost-in-apache</loc>
+    </url>
+    <url>
         <loc>https://upyourgears.ru/articles/programming/link-libraries-in-eclipse</loc>
     </url>
     <url>
-        <loc>https://upyourgears.ru/articles/programming/link-libraries-in-intellij-idea</loc>
+        <loc>https://upyourgears.ru/blog/go-to-laravel</loc>
     </url>
     <url>
         <loc>https://upyourgears.ru/blog/thoughts-about-utorrent</loc>
-    </url>
-    <url>
-        <loc>https://upyourgears.ru/blog/meet-the-gulp</loc>
     </url>
     <url>
         <loc>https://upyourgears.ru/news/tor-5-5-released</loc>
@@ -100,7 +100,13 @@
         <loc>https://upyourgears.ru/sites/sitemap-generator</loc>
     </url>
     <url>
+        <loc>https://upyourgears.ru/blog/meet-the-gulp</loc>
+    </url>
+    <url>
         <loc>https://upyourgears.ru/blog/meet-the-unit-tests</loc>
+    </url>
+    <url>
+        <loc>https://upyourgears.ru/articles/programming/link-libraries-in-intellij-idea</loc>
     </url>
     <url>
         <loc>https://upyourgears.ru/articles/programming/cmake-with-sfml</loc>
