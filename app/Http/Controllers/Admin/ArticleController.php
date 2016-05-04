@@ -42,7 +42,9 @@ class ArticleController extends Controller{
      */
     public function store(Request $request){
         $article = Article::create($request->all());
-        $this->syncTags($article, $request['tag_list']);
+        if($request['tag_list']){
+            $this->syncTags($article, $request['tag_list']);
+        }
 
         return redirect()->route('dashboard.articles.index');
     }
@@ -82,7 +84,9 @@ class ArticleController extends Controller{
      */
     public function update(Article $article, Request $request){
         $article->update($request->all());
-        $this->syncTags($article, $request['tag_list']);
+        if($request['tag_list']){
+            $this->syncTags($article, $request['tag_list']);
+        }
 
         return redirect()->back();
     }
