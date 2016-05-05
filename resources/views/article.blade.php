@@ -12,7 +12,7 @@
             @unless($article->tags->isEmpty())
                 <ul class="tags clear">
                     @foreach($article->tags as $tag)
-                        <li><a href="">{{ $tag->title }}</a></li>
+                        <li><a href="{{ URL::route('tag.show', $tag->slug) }}">{{ $tag->title }}</a></li>
                     @endforeach
                 </ul>
             @endunless
