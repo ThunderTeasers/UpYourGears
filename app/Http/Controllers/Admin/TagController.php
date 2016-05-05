@@ -16,7 +16,7 @@ class TagController extends Controller{
      * @return View with table witch contains all tags
      */
     public function index(){
-        $tags = Tag::select(['id', 'title'])->get();
+        $tags = Tag::all();
 
         return view('dashboard.tags.index', compact('tags'));
     }

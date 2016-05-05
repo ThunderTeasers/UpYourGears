@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +17,10 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('dashboard.includes.left', function($view){
             $view->with('user', Auth::user());
+        });
+
+        view()->composer('includes.right-side', function($view){
+            $view->with('tags', Tag::all());
         });
     }
 
