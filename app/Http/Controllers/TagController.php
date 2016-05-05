@@ -18,6 +18,17 @@ class TagController extends Controller{
         $tag = Tag::where('slug', $slug)->first();
         $articles = $tag->articles()->paginate(5);
 
+        foreach($articles as $article){
+            $slug = $article->slug;
+            $article->slug = "";
+            $category = $article->category()->first();
+            $parent = $category->parent()->first();
+            if($parent){
+                $article->slug .= '/'.$parent->slug;
+            }
+            $article->slug .= '/'.$category->slug.'/'.$slug;
+        }
+
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->show = false;
 
