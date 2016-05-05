@@ -16,7 +16,7 @@ class TagController extends Controller{
      */
     public function show($slug){
         $tag = Tag::where('slug', $slug)->first();
-        $articles = $tag->articles()->paginate(5);
+        $articles = $tag->articles()->orderBy('created_at', 'DESC')->paginate(5);
 
         foreach($articles as $article){
             $slug = $article->slug;
