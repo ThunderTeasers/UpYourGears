@@ -19,4 +19,5 @@
     @endforeach
 
     {{ $articles->render() }}
+    <br>
 @endsection
