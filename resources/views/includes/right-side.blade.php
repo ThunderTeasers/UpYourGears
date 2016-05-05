@@ -9,3 +9,12 @@
         <p>По всем вопросам писать на почту <a href="mailto:admin@upyourgears.ru">admin@upyourgears.ru</a>.</p>
     </div>
 </div>
+
+<div class="right-side_block">
+    <span class="right-side_block_header">Теги</span>
+    <div class="right-side_block_body" id="tags-list">
+        @foreach($tags as $tag)
+            <a href="{{ URL::route('tag.show', $tag->slug) }}">{{ $tag->title }}</a>
+        @endforeach
+    </div>
+</div>

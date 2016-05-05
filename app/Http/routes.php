@@ -95,7 +95,7 @@ Route::group(['middleware' => ['auth']], function(){
  * Get list of articles with tag
  */
 Route::get('/tag/{slug}', [
-    'uses' => 'TagController@tag',
+    'uses' => 'TagController@show',
     'as' => 'tag.show'
 ])->where('slug', '[A-Za-z0-9]+');
 

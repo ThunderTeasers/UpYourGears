@@ -19,3 +19,13 @@
     }
   }
 }
+
+#tags-list{
+    a{
+      color: $text-color;
+      text-decoration: underline;
+      display: inline-block;
+      margin-right: 3px;
+      margin-top: 3px;
+    }
+}

@@ -20,7 +20,15 @@ class AppServiceProvider extends ServiceProvider
         });
 
         view()->composer('includes.right-side', function($view){
-            $view->with('tags', Tag::all());
+            $tags = Tag::all();
+
+            for($i = 0; $i < count($tags); $i++){
+                if(!$tags[$i]->articles()->first()){
+                    unset($tags[$i]);
+                }
+            }
+            
+            $view->with('tags', $tags);
         });
     }
 
