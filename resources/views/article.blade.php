@@ -8,7 +8,7 @@
     <div class="clear" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
-            <span class="h1" itemprop="headline">{{ $article->title }}</span>
+            <h1 itemprop="headline">{{ $article->title }}</h1>
             @unless($article->tags->isEmpty())
                 <ul class="tags clear">
                     @foreach($article->tags as $tag)

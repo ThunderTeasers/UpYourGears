@@ -1,14 +1,18 @@
 .breadcrumbs{
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   display: block;
 
   li{
     float: left;
-    font-size: 14px;
+    font-size: 16px;
 
     a{
-      color: $second-text-color;
+      color: $first-color;
+
+      &:hover{
+        text-decoration: underline;
+      }
     }
 
     .divider{
@@ -17,7 +21,8 @@
     }
 
     span{
-      color: $third-color;
+      color: $first-color;
+      font-weight: bold;
     }
   }
 }

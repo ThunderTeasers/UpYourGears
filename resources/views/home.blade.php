@@ -16,7 +16,6 @@
         <meta itemprop="description" content="Все, что Вы хотели бы знать о технологиях!"/>
     </div>
 
-    <span class="h1 page-header">Последние статьи</span>
     @foreach($articles as $article)
         <div class="clear">
 			<span class="h3">
@@ -24,32 +23,6 @@
 			</span>
             <div class="page-description">
                 {!! $article->description !!}
-            </div>
-        </div>
-        <br>
-    @endforeach
-    <br>
-    <span class="h1 page-header">Блог</span>
-    @foreach($blog as $b)
-        <div class="clear">
-			<span class="h3">
-				<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>
-			</span>
-            <div class="page-description">
-                {!! $b->description !!}
-            </div>
-        </div>
-        <br>
-    @endforeach
-    <br>
-    <span class="h1 page-header">Новости</span>
-    @foreach($news as $new)
-        <div class="clear">
-			<span class="h3">
-				<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>
-			</span>
-            <div class="page-description">
-                {!! $new->description !!}
             </div>
         </div>
         <br>

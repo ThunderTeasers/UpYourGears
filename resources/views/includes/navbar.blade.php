@@ -1,4 +1,4 @@
-<header id="navbar">
+<header id="navbar" class="clear">
     <div class="container">
         <div id="navbar__header">
             <button type="button" id="dropdown">
@@ -7,10 +7,8 @@
             <a href="/" class="h3">UpYourGears</a>
         </div>
         <nav id="menu">
+            <span id="logo"><a href="/">UpYourGears</a></span>
             <ul>
-                <li class="active">
-                    <a href="/">Главная</a>
-                </li>
                 <li>
                     <a href="/articles">Статьи</a>
                 </li>
@@ -26,15 +24,14 @@
                 <li>
                     <a href="/blog">Блог</a>
                 </li>
+                <li>
+                    <a href="/about">Контакты</a>
+                </li>
             </ul>
+
+            <form action="">
+                <input type="text" placeholder="Поиск...">
+            </form>
         </nav>
     </div>
 </header>
-
-{{--<span class="pull-right" id="navbar__user">--}}
-{{--@if(Auth::check())--}}
-{{--Привет, <a href="{{ route('user.settings') }}" id="navbar__user__name">{{ Auth::user()->username }}</a>! | <a href="{{ route('user.logout') }}">Выйти</a>--}}
-{{--@else--}}
-{{--<a href="{{ route('user.login') }}">Войти</a><span> | </span><a href="{{ route('user.registration') }}">Регистрация</a>--}}
-{{--@endif--}}
-{{--</span>--}}

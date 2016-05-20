@@ -1,0 +1,49 @@
+#navbar{
+  min-height: 36px;
+  line-height: 36px;
+  margin-bottom: 30px;
+  padding-top: 7px;
+
+  ul{
+    list-style: none;
+
+    li{
+      float: left;
+      padding-right: 8px;
+
+      &:not(:first-child){
+        padding-left: 8px;
+      }
+
+      a{
+        color: $first-color;
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  #logo{
+    float: left;
+    font-size: 28px;
+    border-right: 1px solid $text-color;
+    margin-right: 19px;
+    padding-right: 19px;
+
+    a{
+      color: $first-color;
+    }
+  }
+
+  input[type="text"]{
+    float: right;
+    border: 1px solid $second-color;
+    padding: 6px;
+    margin-top: 3px;
+  }
+}

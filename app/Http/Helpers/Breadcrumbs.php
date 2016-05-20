@@ -23,7 +23,7 @@ class Breadcrumbs{
      */
     public function generate(){
         if($this->show){
-            $output = "<ul class='breadcrumbs'><li><a href='/'>Главная</a><span class='divider'>&gt;</span></li>";
+            $output = "<ul class='breadcrumbs clear'><li><a href='/'>Главная</a><span class='divider'>&gt;</span></li>";
 
             foreach($this->_breadcrumbs as $key => $value){
                 $output .= "<li>";

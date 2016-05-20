@@ -13,32 +13,25 @@
 
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 980px;
   }
-}
-
-#right-side{
-  float: left;
-  width: 25%;
-}
-
-#left-side{
-  float: left;
-  width: 73%;
-  padding-right: 10px;
 }
 
 .h1, .h2, .h3{
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   display: block;
-  color: $third-color;
+  color: $main-text-color;
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+h2, h3, h4, h5, h6 {
   margin: 12px 0;
-  color: $second-text-color;
+  color: $main-text-color;
+}
+
+h1{
+  color: $first-color;
+  margin: 12px 0;
 }
 
 .normal-pre{
@@ -50,6 +43,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 
+.h1, .h2, .h3{
+  a{
+    color: $main-text-color;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
 .h1{
   font-size: 26px;
   line-height: 28px;
@@ -57,14 +60,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .h2{
-  font-size: 22px;
+  font-size: 24px;
   line-height: 24px;
   margin-bottom: 12px;
 }
 
 .h3{
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 22px;
   margin-bottom: 8px;
 }
 

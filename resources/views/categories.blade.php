@@ -8,7 +8,7 @@
     <div itemscope itemtype="http://schema.org/Article">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
-            <span class="h1" itemprop="name">{{ $category->title }}</span>
+            <h1 itemprop="name">{{ $category->title }}</h1>
         </div>
         <div class="page-description" itemprop="description">
             {!! $category->description !!}
@@ -20,9 +20,6 @@
             <a href="/{{ $category->slug.'/'.$child->slug }}">
                 {{ $child->title }}
             </a>
-            <span class="category-count">
-                {{ $child->articles()->count() }}
-            </span>
         </span>
     @endforeach
 @endsection

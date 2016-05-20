@@ -1,7 +1,7 @@
 @if(isset($breadcrumbs))
     {!! $breadcrumbs->generate() !!}
 @else
-    <ul class='breadcrumbs'>
+    <ul class='breadcrumbs clear'>
         <li>
             <a href='/'>Главная</a>
             <span class='divider'>&gt;</span>

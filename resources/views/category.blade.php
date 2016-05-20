@@ -8,7 +8,7 @@
     <div itemscope itemtype="http://schema.org/Blog">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
-            <span class="h1" itemprop="name">{{ $category->title }}</span>
+            <h1 itemprop="name">{{ $category->title }}</h1>
         </div>
         <div class="page-description" itemprop="description">
             {!! $category->description !!}
@@ -19,7 +19,6 @@
                 <span class="page-header h2">
                     <a href="{{ $category->slug.'/'.$article->slug }}" itemprop="name">{{ $article->title }}</a>
                     <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
-                    <span class="date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}</span>
                 </span>
                 <div class="page-description" itemprop="description">
                     {!! $article->description !!}
