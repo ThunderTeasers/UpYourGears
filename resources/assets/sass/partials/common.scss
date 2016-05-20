@@ -100,9 +100,3 @@ h1{
 .callout-danger {
   border-left-color: #ce4844;
 }
-
-@media screen and (max-width: $tablet-size){
-  #right-side, #left-side{
-    width: 100%;
-  }
-}

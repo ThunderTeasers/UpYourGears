@@ -1,36 +1,40 @@
-.container{
-  #navbar__header{
-    padding-top: 13px;
+#navbar{
+  .container{
+    #navbar__header{
+      button{
+        position: relative;
+        top: -7px;
+        float: right;
+        background: transparent none;
+        border: 1px solid transparent;
 
-    button{
-      position: relative;
-      top: -7px;
-      float: right;
-      background: transparent none;
-      border: 1px solid transparent;
-
-      img{
-        width: 32px;
-        height: 32px;
+        img{
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
-}
 
-#navbar__header{
-  display: none;
+  #navbar__header{
+    display: none;
+  }
 }
 
 @media screen and (max-width: $mobile-size){
   #navbar{
     #menu{
       display: none;
+
+      #logo{
+        display: none;
+      }
     }
 
     ul{
       li{
         width: 100%;
-        border-top: 1px solid $third-color;
+        padding-left: 0 !important;
       }
 
       &:after{
@@ -45,9 +49,11 @@
 
     #navbar__header{
       display: block;
-    }
 
-    background-color: $first-color;
+      button{
+        margin-top: 6px;
+      }
+    }
 
     #dropdown{
       display: block;
