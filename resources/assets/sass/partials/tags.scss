@@ -1,20 +1,17 @@
 .tags{
   list-style: none;
-  padding: 0;
-  margin: 0 0 10px;
 
   li{
     float: left;
-    border: 1px solid $third-color;
-    background-color: $first-color;
-    padding: 2px 4px;
+    text-decoration: underline dotted red;
 
     &:not(:last-child){
       margin-right: 5px;
     }
 
     a{
-      color: $text-color;
+      color: $first-color;
+      font-weight: bold;
       display: block;
     }
   }

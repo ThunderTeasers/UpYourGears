@@ -4,7 +4,7 @@ pre {
   color: #333;
   display: block;
   margin: 0 0 30px 0;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
@@ -21,7 +21,7 @@ pre.prettyprint {
 }
 
 .com {
-  color: #999;
+  color: #424242;
 }
 
 .lit {
@@ -29,7 +29,7 @@ pre.prettyprint {
 }
 
 .pun, .opn, .clo {
-  color: #93a1a1;
+  color: #545e5e;
 }
 
 .fun {
@@ -41,19 +41,18 @@ pre.prettyprint {
 }
 
 .kwd, .prettyprint .tag {
-  color: #2F6F9F;
+  color: #2b5d89;
 }
 
 .typ, .atn, .dec, .var {
-  color: #4F9FCF;
+  color: #478fba;
 }
 
 .pln {
-  color: $second-text-color;
+  color: $first-color;
 }
 
 .prettyprint {
   padding: 10px 15px;
-  background-color: $first-color;
-  border: 1px solid $third-color;
+  border: 1px solid $text-color;
 }

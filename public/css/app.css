@@ -21,9 +21,9 @@ body {
   color: #242424; }
 
 code {
-  border: 1px solid #d55800;
-  color: #b7b7b7;
-  font-size: 13px;
+  border: 1px solid #2a2a2a;
+  background-color: #f2f2f2;
+  color: #242424;
   padding-left: 3px;
   padding-right: 3px; }
 
@@ -97,8 +97,10 @@ h1 {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #a5a5a5;
-  background-color: #242424;
   border-left-width: 5px; }
+  .callout .h3 {
+    color: #242424;
+    font-weight: bold; }
 
 .callout-info {
   border-left-color: #1b809e; }
@@ -223,7 +225,6 @@ h1 {
   margin-bottom: 20px; }
 
 .date {
-  font-family: Georgia,"Times New Roman",Times,serif;
   color: #a5a5a5;
   display: block;
   font-size: 12px; }
@@ -239,11 +240,16 @@ h1 {
   font-weight: bold;
   color: #242424; }
 
-main img:not(.article-logo) {
+main img:not(.article-logo), iframe {
   border: none;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.75);
   margin-top: 15px;
   margin-bottom: 15px; }
+
+main ul:not(.breadcrumbs) and :not(.tags) li {
+  margin-left: 30px;
+  padding-bottom: 4px;
+  padding-top: 4px; }
 
 .article-logo {
   float: left;
@@ -255,11 +261,11 @@ main img:not(.article-logo) {
 
 ul.pagination {
   list-style: none;
-  margin: 40px 0 0;
   padding: 0;
   text-align: center;
   font-size: 20px;
-  line-height: 28px; }
+  line-height: 28px;
+  margin: 40px 0 20px; }
   ul.pagination li {
     display: inline-block;
     width: 28px;
@@ -508,7 +514,7 @@ pre {
   color: #333;
   display: block;
   margin: 0 0 30px 0;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
@@ -522,13 +528,13 @@ pre.prettyprint {
   overflow-y: scroll; }
 
 .com {
-  color: #999; }
+  color: #424242; }
 
 .lit {
   color: #195f91; }
 
 .pun, .opn, .clo {
-  color: #93a1a1; }
+  color: #545e5e; }
 
 .fun {
   color: #dc322f; }
@@ -537,18 +543,17 @@ pre.prettyprint {
   color: #D44950; }
 
 .kwd, .prettyprint .tag {
-  color: #2F6F9F; }
+  color: #2b5d89; }
 
 .typ, .atn, .dec, .var {
-  color: #4F9FCF; }
+  color: #478fba; }
 
 .pln {
-  color: #b7b7b7; }
+  color: #242424; }
 
 .prettyprint {
   padding: 10px 15px;
-  background-color: #242424;
-  border: 1px solid #d55800; }
+  border: 1px solid #a5a5a5; }
 
 footer {
   height: 49px;
@@ -583,18 +588,15 @@ footer {
   padding: 5px; }
 
 .tags {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px; }
+  list-style: none; }
   .tags li {
     float: left;
-    border: 1px solid #d55800;
-    background-color: #242424;
-    padding: 2px 4px; }
+    text-decoration: underline dotted red; }
     .tags li:not(:last-child) {
       margin-right: 5px; }
     .tags li a {
-      color: #a5a5a5;
+      color: #242424;
+      font-weight: bold;
       display: block; }
 
 #tags-list a {

@@ -87,8 +87,12 @@ h1{
   padding: 10px;
   margin: 10px 0;
   border: 1px solid $text-color;
-  background-color: $first-color;
   border-left-width: 5px;
+
+  .h3{
+    color: $first-color;
+    font-weight: bold;
+  }
 }
 
 .callout-info {

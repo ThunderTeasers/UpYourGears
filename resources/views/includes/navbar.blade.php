@@ -24,14 +24,7 @@
                 <li>
                     <a href="/blog">Блог</a>
                 </li>
-                <li>
-                    <a href="/about">Контакты</a>
-                </li>
             </ul>
-
-            <form action="">
-                <input type="text" placeholder="Поиск...">
-            </form>
         </nav>
     </div>
 </header>

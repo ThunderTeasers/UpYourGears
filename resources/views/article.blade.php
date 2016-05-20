@@ -9,17 +9,7 @@
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
             <h1 itemprop="headline">{{ $article->title }}</h1>
-            @unless($article->tags->isEmpty())
-                <ul class="tags clear">
-                    @foreach($article->tags as $tag)
-                        <li><a href="{{ URL::route('tag.show', $tag->slug) }}">{{ $tag->title }}</a></li>
-                    @endforeach
-                </ul>
-            @endunless
-            <span class="date">
-                <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
-                {{ \Jenssegers\Date\Date::parse($article->created_at)->format('j F Y') }}
-            </span>
+            <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
         </div>
         <div class="page-description">
             <div itemprop="description">
