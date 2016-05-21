@@ -24,6 +24,9 @@
                 <li>
                     <a href="/blog">Блог</a>
                 </li>
+                <li>
+                    <a href="/about">Контакты</a>
+                </li>
             </ul>
         </nav>
     </div>

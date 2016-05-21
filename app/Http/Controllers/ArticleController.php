@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
 
 class ArticleController extends Controller{
+    public function about(){
+        $breadcrumbs = new Breadcrumbs;
+        $breadcrumbs->add('Контакты', '');
+
+        return view('about', compact('breadcrumbs'));
+    }
+
     /**
      * Search data from titles and render it
      *

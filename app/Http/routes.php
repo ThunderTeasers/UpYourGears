@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'CategoryController@getHome');
+Route::get('/about', [
+    'uses' => 'ArticleController@about',
+    'as' => 'about'
+]);
 
 Route::get('/login', [
     'uses' => 'UserController@getLogin',

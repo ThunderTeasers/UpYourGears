@@ -25,5 +25,10 @@
     </div>
 
     <script type="text/javascript" src="/public/js/all.js"></script>
+    <script>
+        (function(){
+            console.log(uyg.getJSON("http://laravel.dev/tsconfig.json"));
+        })();
+    </script>
 </body>
 </html>
