@@ -19,7 +19,7 @@
     @foreach($articles as $article)
         <div class="clear">
 			<span class="h3">
-				<a href="/articles/{{ $article->category()->first()->slug }}/{{ $article->slug }}">{{ $article->title }}</a>
+				<a href="/{{ $article->category()->first()->slug }}/{{ $article->slug }}">{{ $article->title }}</a>
 			</span>
             <div class="page-description">
                 {!! $article->description !!}
