@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
 
 class ArticleController extends Controller{
+    /**
+     * Show about page
+     *
+     * @return View
+     */
     public function about(){
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Контакты', '');
@@ -31,7 +36,7 @@ class ArticleController extends Controller{
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->show = false;
 
-        return view('search', ['articles' => $articles, 'breadcrumbs' => $breadcrumbs]);
+        return view('search', compact('articles', 'breadcrumbs'));
     }
 
     public function getOne($article_slug){

@@ -12,6 +12,7 @@
                 </div>
             </div>
         @endforeach
+        {{ $articles->render() }}
     @else
         <span>Ничего не найдено.</span>
     @endif
