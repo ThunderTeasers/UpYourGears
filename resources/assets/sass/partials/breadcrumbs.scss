@@ -7,8 +7,9 @@
     float: left;
     font-size: 16px;
 
-    a{
+    a span{
       color: $first-color;
+      font-weight: normal;
 
       &:hover{
         text-decoration: underline;
