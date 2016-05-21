@@ -7,25 +7,25 @@
             <a href="/" class="h3">UpYourGears</a>
         </div>
         <nav id="menu">
-            <span id="logo"><a href="/">UpYourGears</a></span>
+            <span id="logo"><a href="/" title="UpYourGears">UpYourGears</a></span>
             <ul>
                 <li>
-                    <a href="/articles">Статьи</a>
+                    <a href="/articles" title="Статьи">Статьи</a>
                 </li>
                 <li>
-                    <a href="/programs">Программы</a>
+                    <a href="/programs" title="Программы">Программы</a>
                 </li>
                 <li>
-                    <a href="/news">Новости</a>
+                    <a href="/news" title="Новости">Новости</a>
                 </li>
                 <li>
-                    <a href="/sites">Сайты</a>
+                    <a href="/sites" title="Сайты">Сайты</a>
                 </li>
                 <li>
-                    <a href="/blog">Блог</a>
+                    <a href="/blog" title="Блог">Блог</a>
                 </li>
                 <li>
-                    <a href="/about">Контакты</a>
+                    <a href="/about" title="Контакты">Контакты</a>
                 </li>
             </ul>
         </nav>
