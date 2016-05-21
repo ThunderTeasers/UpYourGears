@@ -31,7 +31,7 @@ class ArticleController extends Controller{
      * @return mixed
      */
     public function postSearch(Request $request){
-        $articles = Article::where('title', 'LIKE', '%'.$request['search'].'%')->paginate(1);
+        $articles = Article::where('title', 'LIKE', '%'.$request['search'].'%')->paginate(5);
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->show = false;
