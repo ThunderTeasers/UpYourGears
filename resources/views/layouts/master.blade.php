@@ -15,7 +15,9 @@
     @endif
 
     <div id="wrapper">
+        <!--noindex-->
         @include('includes.navbar')
+        <!--/noindex-->
         <main class="container clear">
             @if(!Request::is('/'))
                 @include('includes.breadcrumbs')
