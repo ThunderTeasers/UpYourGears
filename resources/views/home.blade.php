@@ -27,6 +27,7 @@
             </div>
         </div>
         <br>
+        <br>
     @endforeach
     <br>
     <span class="h1 page-header">Свежие записи в блоге</span>
@@ -40,6 +41,7 @@
             </div>
         </div>
         <br>
+        <br>
     @endforeach
     <br>
     <span class="h1 page-header">Свежие новости</span>
@@ -52,6 +54,7 @@
                 {!! $new->description !!}
             </div>
         </div>
+        <br>
         <br>
     @endforeach
     <br>
