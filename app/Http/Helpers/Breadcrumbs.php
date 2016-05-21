@@ -23,17 +23,22 @@ class Breadcrumbs{
      */
     public function generate(){
         if($this->show){
-            $output = "<ul class='breadcrumbs clear'><li><a href='/'>Главная</a><span class='divider'>&gt;</span></li>";
+            $output = "<ul class='breadcrumbs clear' itemscope itemtype='http://schema.org/BreadcrumbList'><li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'><a itemprop='item' href='/'><span itemprop='name'>Главная</span><meta itemprop='position' content='1'></a><span class='divider'>&gt;</span></li>";
 
+            $position = 2;
             foreach($this->_breadcrumbs as $key => $value){
-                $output .= "<li>";
+                $output .= "<li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem'>";
                 if($value !== end($this->_breadcrumbs)){
-                    $output .= "<a href='{$key}'>{$value}</a>";
-                    $output .= "<span class=\"divider\">&gt;</span>";
+                    $output .= "<a itemprop='item' href='{$key}'><span itemprop='name'>{$value}</span></a>";
+                    $output .= "<meta itemprop='position' content='{$position}'>";
+                    $output .= "<span class='divider'>&gt;</span>";
                 }else{
-                    $output .= "<span>{$value}</span>";
+                    $output .= "<span itemprop='item'><span itemprop='name'>{$value}</span></span>";
+                    $output .= "<meta itemprop='position' content='{$position}'>";
                 }
                 $output .= "</li>";
+
+                $position++;
             }
 
             $output .= "</ul>";
