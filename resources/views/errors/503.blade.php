@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    <span style="color: #bbbbbb">Ошибка. Перейти на <a href="/">главную</a>?</span>
+    <span style="color:#3c3c3c;font-size:20px">Ошибка. Перейти на <a href="/">главную</a>?</span>
 @endsection

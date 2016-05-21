@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    <span style="color: #bbbbbb">Страница не найдена. Перейти на <a href="/">главную</a>?</span>
+    <span style="color:#3c3c3c;font-size:20px">Страница не найдена. Перейти на <a href="/">главную</a>?</span>
 @endsection
