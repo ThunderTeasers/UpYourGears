@@ -29,5 +29,10 @@
                 </li>
             </ul>
         </nav>
+
+        <form method="POST" action="/search" accept-charset="UTF-8">
+            {{ Form::token() }}
+            <input required="required" id="search" placeholder="Поиск" name="search" type="text">
+        </form>
     </div>
 </header>
