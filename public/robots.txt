@@ -4,4 +4,4 @@ Disallow: /fonts
 Disallow: /js
 
 Sitemap: https://upyourgears.ru/sitemap.xml
-Host: upyourgears.ru
+Host: https://upyourgears.ru
