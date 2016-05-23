@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('meta_title')
+    Поиск
+@endsection
+
 @section('content')
     @if(count($articles) > 0)
         @foreach($articles as $article)
