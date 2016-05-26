@@ -13,6 +13,7 @@
 @section('content')
     <div itemscope itemtype="http://schema.org/Article">
         <meta itemprop="inLanguage" content="ru-RU"/>
+        <meta itemprop="name" content="UpYourGears">
         <meta itemprop="description" content="Все, что Вы хотели бы знать о технологиях!"/>
     </div>
 
