@@ -175,6 +175,14 @@ Route::get('/articles/{category_slug}/{article_slug}', [
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');
 
 /**
+ * Get drafts
+ */
+Route::get('/drafts', [
+    'uses' => 'DraftController@all',
+    'as' => 'drafts.all'
+]);
+
+/**
  * Get programms
  */
 Route::get('/programs', [
