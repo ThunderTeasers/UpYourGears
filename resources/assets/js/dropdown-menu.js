@@ -1,6 +1,7 @@
 "use strict";
 
-var menu = $('#menu');
-$('#dropdown').click(function(){
-    menu.slideToggle();
-});
+(function(document){
+    document.querySelector('#dropdown').onclick = function(){
+        document.querySelector('#menu').classList.toggle('open-menu');
+    }
+})(document);
