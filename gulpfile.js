@@ -28,5 +28,5 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.scripts(['fancybox.js', 'dropdown-menu.js', 'spoiler.js']);
+    mix.scripts(['fancybox.js', 'prettify.js', 'dropdown-menu.js', 'spoiler.js']);
 });
