@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'CategoryController@getHome');
+Route::get('/', 'CategoryController@home');
 Route::get('/about', [
     'uses' => 'ArticleController@about',
     'as' => 'about'
@@ -106,7 +106,7 @@ Route::get('/tag/{slug}', [
  * Get news
  */
 Route::get('/news', [
-    'uses' => 'CategoryController@getNews',
+    'uses' => 'CategoryController@news',
     'as' => 'categories.news.list'
 ]);
 
@@ -114,7 +114,7 @@ Route::get('/news', [
  * Get one news article
  */
 Route::get('/news/{news_slug}', [
-    'uses' => 'ArticleController@getOne',
+    'uses' => 'ArticleController@one',
     'as' => 'article.news.one'
 ])->where('news_slug', '[A-Za-z0-9-_]+');
 
@@ -122,7 +122,7 @@ Route::get('/news/{news_slug}', [
  * Get blog
  */
 Route::get('/blog', [
-    'uses' => 'CategoryController@getBlog',
+    'uses' => 'CategoryController@blog',
     'as' => 'categories.blog.list'
 ]);
 
@@ -130,7 +130,7 @@ Route::get('/blog', [
  * Get one blog article
  */
 Route::get('/blog/{blog_slug}', [
-    'uses' => 'ArticleController@getOne',
+    'uses' => 'ArticleController@one',
     'as' => 'article.blog.one'
 ])->where('blog_slug', '[A-Za-z0-9-_]+');
 
@@ -138,7 +138,7 @@ Route::get('/blog/{blog_slug}', [
  * Get sites
  */
 Route::get('/sites', [
-    'uses' => 'CategoryController@getSites',
+    'uses' => 'CategoryController@sites',
     'as' => 'categories.sites.list'
 ]);
 
@@ -146,7 +146,7 @@ Route::get('/sites', [
  * Get one sites article
  */
 Route::get('/sites/{site_slug}', [
-    'uses' => 'ArticleController@getOne',
+    'uses' => 'ArticleController@one',
     'as' => 'article.sites.one'
 ])->where('site_slug', '[A-Za-z0-9-_]+');
 
@@ -162,7 +162,7 @@ Route::get('/articles', [
  * Get articles category
  */
 Route::get('/articles/{category_slug}', [
-    'uses' => 'CategoryController@getCategory',
+    'uses' => 'CategoryController@one',
     'as' => 'categories.category'
 ])->where('category_slug', '[A-Za-z0-9-_]+');
 
@@ -170,7 +170,7 @@ Route::get('/articles/{category_slug}', [
  * Get articles articles =\
  */
 Route::get('/articles/{category_slug}/{article_slug}', [
-    'uses' => 'ArticleController@getOneFromCategory',
+    'uses' => 'ArticleController@oneWithCategory',
     'as' => 'categories.category.article'
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'article_slug', '[A-Za-z0-9-_]+');
 
@@ -186,7 +186,7 @@ Route::get('/drafts', [
  * Get programms
  */
 Route::get('/programs', [
-    'uses' => 'CategoryController@getPrograms',
+    'uses' => 'CategoryController@programs',
     'as' => 'categories.programs'
 ]);
 
@@ -194,7 +194,7 @@ Route::get('/programs', [
  * Get programs category
  */
 Route::get('/programs/{category_slug}', [
-    'uses' => 'CategoryController@getCategory',
+    'uses' => 'CategoryController@one',
     'as' => 'categories.category'
 ])->where('category_slug', '[A-Za-z0-9-_]+');
 
@@ -202,6 +202,6 @@ Route::get('/programs/{category_slug}', [
  * Get programs program =\
  */
 Route::get('/programs/{category_slug}/{program_slug}', [
-    'uses' => 'ArticleController@getOneFromCategory',
+    'uses' => 'ArticleController@oneWithCategory',
     'as' => 'categories.category.program'
 ])->where('category_slug', '[A-Za-z0-9-_]+', 'program_slug', '[A-Za-z0-9-_]+');

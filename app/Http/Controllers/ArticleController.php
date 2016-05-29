@@ -39,7 +39,7 @@ class ArticleController extends Controller{
         return view('search', compact('articles', 'breadcrumbs'));
     }
 
-    public function getOne($article_slug){
+    public function one($article_slug){
         $article = Article::where(['slug' => $article_slug])->first();
         if(!$article){
             App::abort(404);
@@ -55,12 +55,10 @@ class ArticleController extends Controller{
         $breadcrumbs->add($category->title, ($parent_category ? '/'.$parent_category->slug : '').'/'.$category->slug);
         $breadcrumbs->add($article->title, $article->slug);
 
-        $comments = $article->comments()->get();
-
-        return view('article', ['article' => $article, 'breadcrumbs' => $breadcrumbs, 'comments' => $comments]);
+        return view('article', compact('article', 'breadcrumbs'));
     }
 
-    public function getOneFromCategory($category_slug, $article_slug){
+    public function oneWithCategory($category_slug, $article_slug){
         $article = Article::where(['slug' => $article_slug])->first();
         if(!$article){
             App::abort(404);
@@ -76,8 +74,6 @@ class ArticleController extends Controller{
         $breadcrumbs->add($category->title, ($parent_category ? '/'.$parent_category->slug : '').'/'.$category->slug);
         $breadcrumbs->add($article->title, $article->slug);
 
-        $comments = $article->comments()->get();
-
-        return view('article', ['article' => $article, 'breadcrumbs' => $breadcrumbs, 'comments' => $comments]);
+        return view('article', compact('article', 'breadcrumbs'));
     }
 }
