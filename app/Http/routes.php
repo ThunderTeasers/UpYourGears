@@ -32,7 +32,7 @@ Route::get('/registration', [
 Route::post('/registration', 'UserController@postRegistration');
 
 Route::post('/search', [
-    'uses' => 'ArticleController@postSearch',
+    'uses' => 'ArticleController@search',
     'as' => 'search'
 ]);
 
