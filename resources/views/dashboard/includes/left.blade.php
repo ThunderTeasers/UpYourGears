@@ -54,5 +54,16 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a><span class="link-title">Заметки</span></a>
+            <ul class="collapse">
+                <li>
+                    <a href="{{ URL::route('dashboard.drafts.create') }}">Создать</a>
+                </li>
+                <li>
+                    <a href="{{ URL::route('dashboard.drafts.index') }}">Лист</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </aside>

@@ -15,6 +15,7 @@ return array(
     'App\\Helpers\\Navbar' => $baseDir . '/app/Http/Helpers/Navbar.php',
     'App\\Http\\Controllers\\Admin\\ArticleController' => $baseDir . '/app/Http/Controllers/Admin/ArticleController.php',
     'App\\Http\\Controllers\\Admin\\CategoryController' => $baseDir . '/app/Http/Controllers/Admin/CategoryController.php',
+    'App\\Http\\Controllers\\Admin\\DraftController' => $baseDir . '/app/Http/Controllers/Admin/DraftController.php',
     'App\\Http\\Controllers\\Admin\\TagController' => $baseDir . '/app/Http/Controllers/Admin/TagController.php',
     'App\\Http\\Controllers\\Admin\\UserController' => $baseDir . '/app/Http/Controllers/Admin/UserController.php',
     'App\\Http\\Controllers\\ArticleController' => $baseDir . '/app/Http/Controllers/ArticleController.php',

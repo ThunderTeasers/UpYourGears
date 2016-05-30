@@ -30,6 +30,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->model('categories', 'App\Models\Category');
         $router->model('tags', 'App\Models\Tag');
         $router->model('users', 'App\Models\User');
+        $router->model('drafts', 'App\Models\Draft');
     }
 
     /**
