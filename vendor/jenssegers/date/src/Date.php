@@ -434,10 +434,34 @@ class Date extends Carbon
 
         // Get all the language lines of the current locale.
         $all = static::getTranslator()->getCatalogue()->all();
+        $terms = array_intersect_key($all['messages'], array_flip((array) $keys));
 
-        $lines = array_intersect_key($all['messages'], array_flip((array) $keys));
+        // Split terms with a | sign.
+        foreach ($terms as $i => $term) {
+            if (strpos($term, '|') === false) {
+                continue;
+            }
 
-        // Replace the translated words with the English words
-        return str_ireplace($lines, array_keys($lines), $time);
+            // Split term options.
+            $options = explode('|', $term);
+
+            // Remove :count and {count} placeholders.
+            $options = array_map(function ($option) {
+                $option = trim(str_replace(':count', '', $option));
+                $option = preg_replace('/({\d+(,(\d+|Inf))?}|\[\d+(,(\d+|Inf))?\])/', '', $option);
+
+                return $option;
+            }, $options);
+
+            $terms[$i] = $options;
+        }
+
+        // Replace the localized words with English words.
+        $translated = $time;
+        foreach ($terms as $english => $localized) {
+            $translated = str_ireplace($localized, $english, $translated);
+        }
+
+        return $translated;
     }
 }
