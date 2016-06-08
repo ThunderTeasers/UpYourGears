@@ -722,6 +722,7 @@ return array(
     'Illuminate\\Contracts\\Queue\\Job' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/Job.php',
     'Illuminate\\Contracts\\Queue\\Monitor' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/Monitor.php',
     'Illuminate\\Contracts\\Queue\\Queue' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/Queue.php',
+    'Illuminate\\Contracts\\Queue\\QueueableCollection' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableCollection.php',
     'Illuminate\\Contracts\\Queue\\QueueableEntity' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/QueueableEntity.php',
     'Illuminate\\Contracts\\Queue\\ShouldQueue' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php',
     'Illuminate\\Contracts\\Redis\\Database' => $vendorDir . '/laravel/framework/src/Illuminate/Contracts/Redis/Database.php',

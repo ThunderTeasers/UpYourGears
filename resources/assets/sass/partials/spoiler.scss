@@ -1,8 +1,4 @@
 .spoiler{
-  &.spoiler-open:before{
-    background: url(/public/images/common/spoiler.png) left bottom no-repeat;
-  }
-
   &:before{
     display: block;
     float: left;
@@ -12,18 +8,28 @@
     content: ' ';
   }
 
-  .spoiler__head{
-    color: $third-color;
+  .spoiler_head{
+    user-select: none;
+    color: $main-text-color;
     text-decoration: underline;
     cursor: pointer;
   }
 
-  .spoiler__body{
+  .spoiler_body{
     margin-top: 5px;
     margin-bottom: 10px;
     display: none;
-    border: 1px solid $third-color;
-    background-color: $first-color;
+    border: 1px solid $second-color;
     padding: 5px;
+  }
+
+  &.spoiler-open{
+    .spoiler_body{
+      display: block;
+    }
+
+    &:before{
+      background: url(/public/images/common/spoiler.png) left bottom no-repeat;
+    }
   }
 }
