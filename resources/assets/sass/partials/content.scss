@@ -51,3 +51,10 @@ main ul:not(.breadcrumbs):not(.tags), main ol{
 #wrapper{
   min-height: 100%;
 }
+
+@media screen and (max-width: $mobile-size){
+  main img{
+    width: 100%;
+    height: auto;
+  }
+}
