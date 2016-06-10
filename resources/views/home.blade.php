@@ -31,6 +31,20 @@
         <br>
     @endforeach
     <br>
+    <span class="h1 page-header">Свежие обзоры программ</span>
+    @foreach($programs as $program)
+        <div class="clear">
+			<span class="h3">
+				<a href="/programs/{{ $program->slug }}">{{ $program->title }}</a>
+			</span>
+            <div class="page-description">
+                {!! $program->description !!}
+            </div>
+        </div>
+        <br>
+        <br>
+    @endforeach
+    <br>
     <span class="h1 page-header">Свежие записи в блоге</span>
     @foreach($blog as $b)
         <div class="clear">

@@ -18,9 +18,10 @@ class CategoryController extends Controller{
     public function home(){
         $articles = Article::whereIn('category_id', [2, 7, 8, 9, 10])->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
         $news = Article::where('category_id', 3)->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
+        $programs = Article::whereIn('category_id', [12, 13, 14, 15, 16, 17])->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
         $blog = Article::where('category_id', 4)->where('is_published', 1)->select('id', 'title', 'description', 'created_at', 'slug', 'category_id')->orderBy('created_at', 'DESC')->take(3)->get();
 
-        return view('home', compact('articles', 'news', 'blog'));
+        return view('home', compact('articles', 'news', 'programs', 'blog'));
     }
 
     /**
