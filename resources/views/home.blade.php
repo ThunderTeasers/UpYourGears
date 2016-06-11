@@ -35,7 +35,7 @@
     @foreach($programs as $program)
         <div class="clear">
 			<span class="h3">
-				<a href="/programs/{{ $program->slug }}">{{ $program->title }}</a>
+				<a href="/programs/{{ $program->category()->first()->slug }}/{{ $program->slug }}">{{ $program->title }}</a>
 			</span>
             <div class="page-description">
                 {!! $program->description !!}
