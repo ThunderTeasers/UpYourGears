@@ -11,6 +11,36 @@
 |
 */
 
+/**
+ * Redirects
+ */
+Route::get('/programs/drweb-cureit', function(){
+    return Redirect::to('/');
+});
+
+Route::get('/programs/keepass-2', function(){
+    return Redirect::to('/');
+});
+
+Route::get('/programs/unlocker', function(){
+    return Redirect::to('/');
+});
+
+Route::get('/.well-known/apple-app-site-association', function(){
+    return Redirect::to('/');
+});
+
+Route::get('/apple-app-site-association', function(){
+    return Redirect::to('/');
+});
+
+Route::get('/tags/{anything}', function(){
+    return Redirect::to('/');
+});
+
+/**
+ * Home and other simple stuff
+ */
 Route::get('/', 'CategoryController@home');
 Route::get('/about', [
     'uses' => 'ArticleController@about',
