@@ -15,27 +15,27 @@
  * Redirects
  */
 Route::get('/programs/drweb-cureit', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 Route::get('/programs/keepass-2', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 Route::get('/programs/unlocker', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 Route::get('/.well-known/apple-app-site-association', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 Route::get('/apple-app-site-association', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 Route::get('/tags/{anything}', function(){
-    return Redirect::to('/');
+    return Redirect::to('/', 301);
 });
 
 /**
