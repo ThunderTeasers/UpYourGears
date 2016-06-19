@@ -27,7 +27,8 @@ class ComposerAutoloaderInitd97a39bf243abc9a9d5ccd230d95ba5f
         array_push($includePaths, get_include_path());
         set_include_path(join(PATH_SEPARATOR, $includePaths));
 
-        if (PHP_VERSION_ID >= 50600) {
+        $useStaticLoader = PHP_VERSION_ID >= 50600 && !defined('HHVM_VERSION');
+        if ($useStaticLoader) {
             require_once __DIR__ . '/autoload_static.php';
 
             call_user_func(\Composer\Autoload\ComposerStaticInitd97a39bf243abc9a9d5ccd230d95ba5f::getInitializer($loader));
@@ -50,7 +51,7 @@ class ComposerAutoloaderInitd97a39bf243abc9a9d5ccd230d95ba5f
 
         $loader->register(true);
 
-        if (PHP_VERSION_ID >= 50600) {
+        if ($useStaticLoader) {
             $includeFiles = Composer\Autoload\ComposerStaticInitd97a39bf243abc9a9d5ccd230d95ba5f::$files;
         } else {
             $includeFiles = require __DIR__ . '/autoload_files.php';
