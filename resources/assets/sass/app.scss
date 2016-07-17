@@ -1,3 +1,7 @@
+// Sizes
+$screen-tablet: 768px;
+$screen-mobile: 425px;
+
 // Desktop
 @import "app/normalize";
 @import "app/prototype";
@@ -13,5 +17,14 @@
 @import "app/pagination";
 
 // Tablet
-@import "app/tablet/header";
-@import "app/tablet/sidebar";
+@media screen and(max-width: $screen-tablet) {
+  @import "app/tablet/header";
+  @import "app/tablet/sidebar";
+  @import "app/tablet/prototype";
+  @import "app/tablet/article";
+}
+
+// Mobile
+@media all and (max-width: $screen-mobile) {
+  @import "app/mobile/prototype";
+}

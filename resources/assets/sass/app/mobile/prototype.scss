@@ -1,0 +1,12 @@
+main {
+  flex-direction: column;
+}
+
+aside#content, aside#sidebar {
+  order: 0;
+}
+
+aside#sidebar, header, footer {
+  min-height: 50px;
+  max-height: 50px;
+}

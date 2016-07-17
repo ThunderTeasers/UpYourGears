@@ -3,9 +3,6 @@ $detail-color: #ff8f34;
 $main-text: #121212;
 $light-gray: #7f8c8d;
 
-// Sizes
-$screen-tablet: 768px;
-
 *{
   color: #333;
 }
@@ -41,24 +38,4 @@ aside#content {
   padding-left: 330px;
   display: flex;
   flex-direction: column;
-}
-
-@media all and (max-width: 640px) {
-  main {
-    flex-direction: column;
-  }
-
-  aside#content, aside#sidebar {
-    order: 0;
-  }
-
-  aside#sidebar, header, footer {
-    min-height: 50px;
-    max-height: 50px;
-  }
-}
-
-.page-description {
-  margin-bottom: 40px;
-  line-height: 23px;
 }
