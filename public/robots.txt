@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /css
 Disallow: /fonts
 Disallow: /js
+Disallow: /.well-known
 
 Sitemap: https://upyourgears.ru/sitemap.xml
 Host: https://upyourgears.ru

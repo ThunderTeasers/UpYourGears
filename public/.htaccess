@@ -25,6 +25,10 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
 
+<FilesMatch "\.(?i:doc|odf|pdf|rtf|a)$">
+	Header set Content-Disposition attachment
+</FilesMatch>
+
 AddDefaultCharset utf-8
 
 AddType 'text/html; charset=utf-8' .html .htm .shtml
