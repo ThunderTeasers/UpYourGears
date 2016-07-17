@@ -23,6 +23,9 @@
         </aside>
         <!--/noindex-->
         <aside id="content">
+            @if(!Request::is('/'))
+                @include('includes.breadcrumbs')
+            @endif
             @yield('content')
         </aside>
     </main>
