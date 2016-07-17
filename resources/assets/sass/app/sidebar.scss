@@ -10,7 +10,7 @@ aside#sidebar{
           line-height: 27px;
           height: 27px;
           text-decoration: none;
-          color: #7f8c8d;
+          color: $light-gray;
           font-size: 15px;
 
           &:hover, &.active{
@@ -27,7 +27,7 @@ aside#sidebar{
             padding-left: 30px;
 
             a{
-              color: #7f8c8d;
+              color: $light-gray;
               font-size: 14px;
               line-height: 23px;
               height: 23px;

@@ -1,1 +1,54 @@
-"use strict";!function(e){e.body.innerHTML+='<div id="image-holder"><img src=""></div>';var t=e.querySelectorAll(".fancybox"),i=e.getElementById("image-holder"),n=i.querySelector("img");i.style.display="none",i.onclick=function(e){i.style.display="none",n.setAttribute("src","")},Array.prototype.forEach.call(t,function(e,t){e.onclick=function(t){var o=e.getAttribute("href");n.setAttribute("src",o),n.style.marginLeft="-"+n.width/2+"px",n.style.marginTop="-"+n.height/2+"px",i.style.display="",t.preventDefault()}}),e.body.onresize=function(t){n.height=e.body.offsetHeight,n.style.marginLeft="-"+n.width/2+"px",n.style.marginTop="-"+n.height/2+"px"}}(document),function(e){function t(){var t=e.getElementById("header"),i=e.getElementById("sidebar"),n=e.documentElement,o=n&&n.scrollTop||e.body.scrollTop;o>t.offsetHeight?i.className="fix":i.className=""}window.addEventListener("scroll",t)}(document);
+"use strict";
+
+(function(document){
+    document.body.innerHTML += '<div id="image-holder"><img src=""></div>';
+    
+    var images = document.querySelectorAll('.fancybox');
+    var imageHolder = document.getElementById('image-holder'),
+        imageHolder_image = imageHolder.querySelector('img');
+
+    imageHolder.style.display = 'none';
+
+    imageHolder.onclick = function(event){
+        imageHolder.style.display = 'none';
+        imageHolder_image.setAttribute('src', '');
+    };
+
+    Array.prototype.forEach.call(images, function(el, i){
+        el.onclick = function(event){
+            var href = el.getAttribute('href');
+
+            imageHolder_image.setAttribute('src', href);
+            imageHolder_image.style.marginLeft = '-' + imageHolder_image.width / 2 + 'px';
+            imageHolder_image.style.marginTop = '-' + imageHolder_image.height / 2 + 'px';
+            imageHolder.style.display = '';
+
+            event.preventDefault();
+        };
+    });
+
+    document.body.onresize = function(event){
+        imageHolder_image.height = document.body.offsetHeight;
+        imageHolder_image.style.marginLeft = '-' + imageHolder_image.width / 2 + 'px';
+        imageHolder_image.style.marginTop = '-' + imageHolder_image.height / 2 + 'px';
+    };
+})(document);
+"use strict";
+
+(function(document) {
+    window.addEventListener("scroll", updateScrollbar);
+
+    function updateScrollbar() {
+        var header = document.getElementById('header'),
+            main = document.getElementById('sidebar'),
+            doc = document.documentElement,
+            top = doc && doc.scrollTop || document.body.scrollTop;
+
+        if (top > header.offsetHeight) {
+            main.className = 'fix';
+        } else {
+            main.className = '';
+        }
+    }
+})(document);
+//# sourceMappingURL=all.js.map

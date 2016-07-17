@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
     <main>
         <aside id="sidebar">
             <span class="h2">Категории</span>
