@@ -15,7 +15,7 @@ class Navbar{
 
             return '';
         }else{
-            if($_SERVER['REQUEST_URI'] == $url){
+            if(starts_with($_SERVER['REQUEST_URI'], $url)){
                 return 'active';
             }else{
                 return '';
