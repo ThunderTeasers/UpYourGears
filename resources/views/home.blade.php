@@ -28,6 +28,16 @@
             </div>
         </div>
     @endforeach
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- After articles -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-3272279935644302"
+         data-ad-slot="3789715878"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     <br>
     <span class="h1 page-header">Свежие обзоры программ</span>
     @foreach($programs as $program)
