@@ -16,7 +16,7 @@
     </div>
 
     @foreach($childs as $child)
-        <span class="page-header h3">
+        <span class="page-header h2">
             <a href="/{{ $category->slug.'/'.$child->slug }}">
                 {{ $child->title }}
             </a>
