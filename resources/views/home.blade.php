@@ -19,7 +19,7 @@
 
     <span class="h1 page-header">Свежие статьи</span>
     @foreach($articles as $article)
-        <div class="clearfix">
+        <div class="category-article clearfix">
 			<span class="h2">
 				<a href="/articles/{{ $article->category()->first()->slug }}/{{ $article->slug }}">{{ $article->title }}</a>
 			</span>
@@ -27,13 +27,11 @@
                 {!! $article->description !!}
             </div>
         </div>
-        <br>
-        <br>
     @endforeach
     <br>
     <span class="h1 page-header">Свежие обзоры программ</span>
     @foreach($programs as $program)
-        <div class="clearfix">
+        <div class="category-article clearfix">
 			<span class="h2">
 				<a href="/programs/{{ $program->category()->first()->slug }}/{{ $program->slug }}">{{ $program->title }}</a>
 			</span>
@@ -41,13 +39,11 @@
                 {!! $program->description !!}
             </div>
         </div>
-        <br>
-        <br>
     @endforeach
     <br>
     <span class="h1 page-header">Свежие записи в блоге</span>
     @foreach($blog as $b)
-        <div class="clearfix">
+        <div class="category-article clearfix">
 			<span class="h2">
 				<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>
 			</span>
@@ -55,13 +51,11 @@
                 {!! $b->description !!}
             </div>
         </div>
-        <br>
-        <br>
     @endforeach
     <br>
     <span class="h1 page-header">Свежие новости</span>
     @foreach($news as $new)
-        <div class="clearfix">
+        <div class="category-article clearfix">
 			<span class="h2">
 				<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>
 			</span>
@@ -69,8 +63,6 @@
                 {!! $new->description !!}
             </div>
         </div>
-        <br>
-        <br>
     @endforeach
     <br>
 @endsection
