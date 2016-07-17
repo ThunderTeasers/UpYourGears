@@ -134,7 +134,7 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $childs = $category->childs()->get();
+        $childs = $category->childs();
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Программы', '');

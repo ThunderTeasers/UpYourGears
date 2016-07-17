@@ -4,7 +4,7 @@
     <ul>
     @foreach($categories as $category)
         <li>
-            <a href="/{{ $category->slug }}/">{{ $category->title }}</a>
+            <a href="/{{ $category->slug }}/" class="{{ \App\Helpers\Navbar::isActive($category->slug) }}">{{ $category->title }}</a>
             @if(count($category->childs()) > 0)
                 <ul>
                 @foreach($category->childs() as $child)
