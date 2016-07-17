@@ -1,0 +1,40 @@
+aside#sidebar{
+  nav{
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li{
+        a{
+          line-height: 27px;
+          height: 27px;
+          text-decoration: none;
+          color: #7f8c8d;
+          font-size: 15px;
+
+          &:hover, &.active{
+            border-bottom: 2px solid $detail-color;
+          }
+
+          &.active{
+            font-weight: bold;
+          }
+        }
+
+        ul{
+          li{
+            padding-left: 30px;
+
+            a{
+              color: #7f8c8d;
+              font-size: 14px;
+              line-height: 23px;
+              height: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

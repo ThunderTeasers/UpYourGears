@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Tag;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,20 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('dashboard.includes.left', function($view){
-            $view->with('user', Auth::user());
-        });
+        view()->composer('includes.sidebar', function($view){
+            $categories = Category::select('id', 'title', 'parent_id', 'slug')->where("parent_id", 0)->get();
 
-        view()->composer('includes.right-side', function($view){
-            $tags = Tag::all();
-
-            for($i = 0; $i < count($tags); $i++){
-                if(!$tags[$i]->articles()->first()){
-                    unset($tags[$i]);
-                }
-            }
-            
-            $view->with('tags', $tags);
+            $view->with(compact('categories'));
         });
     }
 

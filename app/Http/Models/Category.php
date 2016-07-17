@@ -33,10 +33,13 @@ class Category extends Model{
      * Return relation to the parent category
      */
     public function parent(){
-        return $this->belongsTo('App\Models\Category', 'parent_id');
+        return $this->belongsTo('App\Models\Category', 'parent_id')->first();
     }
 
+    /**
+     * Return relation to the childrens of current category
+     */
     public function childs(){
-        return $this->hasMany('App\Models\Category', 'parent_id');
+        return $this->hasMany('App\Models\Category', 'parent_id')->get();
     }
 }

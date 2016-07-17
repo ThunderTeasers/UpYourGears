@@ -12,6 +12,13 @@
 */
 
 /**
+ * Testing new design
+ */
+Route::get('/testing', function(){
+    return view('layouts/test');
+});
+
+/**
  * Redirects
  */
 Route::get('/programs/drweb-cureit', function(){

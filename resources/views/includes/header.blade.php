@@ -1,4 +1,17 @@
-<div id="wrapper_header">
-    <h1>UpYourGears</h1>
-    <p>Все, что Вы хотели бы знать о технологиях.</p>
-</div>
+<header id="header">
+    <div id="left">
+        <h1><a href="/">UpYourGears</a></h1>
+    </div>
+    <div id="right">
+        <nav>
+            <ul>
+                <li>
+                    <form method="POST" action="/search" accept-charset="UTF-8">
+                        {{ Form::token() }}
+                        <input required="required" id="search" name="search" type="text">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

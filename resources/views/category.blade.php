@@ -15,7 +15,7 @@
         </div>
 
         @foreach($articles as $article)
-            <div class="category_article clear" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <div class="category-article clearfix" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                 <span class="page-header h2">
                     <a href="{{ $category->slug.'/'.$article->slug }}" itemprop="name">{{ $article->title }}</a>
                     <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
