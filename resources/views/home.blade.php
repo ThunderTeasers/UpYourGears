@@ -19,7 +19,7 @@
 
     <span class="h1 page-header">Свежие статьи</span>
     @foreach($articles as $article)
-        <div class="clear">
+        <div class="clearfix">
 			<span class="h2">
 				<a href="/articles/{{ $article->category()->first()->slug }}/{{ $article->slug }}">{{ $article->title }}</a>
 			</span>
@@ -33,8 +33,8 @@
     <br>
     <span class="h1 page-header">Свежие обзоры программ</span>
     @foreach($programs as $program)
-        <div class="clear">
-			<span class="h3">
+        <div class="clearfix">
+			<span class="h2">
 				<a href="/programs/{{ $program->category()->first()->slug }}/{{ $program->slug }}">{{ $program->title }}</a>
 			</span>
             <div class="page-description">
@@ -47,8 +47,8 @@
     <br>
     <span class="h1 page-header">Свежие записи в блоге</span>
     @foreach($blog as $b)
-        <div class="clear">
-			<span class="h3">
+        <div class="clearfix">
+			<span class="h2">
 				<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>
 			</span>
             <div class="page-description">
@@ -61,8 +61,8 @@
     <br>
     <span class="h1 page-header">Свежие новости</span>
     @foreach($news as $new)
-        <div class="clear">
-			<span class="h3">
+        <div class="clearfix">
+			<span class="h2">
 				<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>
 			</span>
             <div class="page-description">
