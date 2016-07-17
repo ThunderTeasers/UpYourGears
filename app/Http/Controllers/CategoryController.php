@@ -92,12 +92,12 @@ class CategoryController extends Controller{
             App::abort(404);
         }
 
-        $childs = $category->childs()->get();
+        $childs = $category->childs();
 
         $breadcrumbs = new Breadcrumbs;
         $breadcrumbs->add('Статьи', '/articles');
 
-        return view('categories', ['category' => $category, 'childs' => $childs, 'breadcrumbs' => $breadcrumbs]);
+        return view('categories', compact('category', 'childs', 'breadcrumbs'));
     }
 
     /**

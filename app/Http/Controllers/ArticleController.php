@@ -45,8 +45,8 @@ class ArticleController extends Controller{
             App::abort(404);
         }
 
-        $category = $article->category()->get()->first();
-        $parent_category = $category->parent()->get()->first();
+        $category = $article->category()->first();
+        $parent_category = $category->parent();
 
         $breadcrumbs = new Breadcrumbs;
         if($parent_category){
