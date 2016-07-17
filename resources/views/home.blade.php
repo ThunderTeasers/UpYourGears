@@ -30,47 +30,47 @@
         <br>
         <br>
     @endforeach
-    {{--<br>--}}
-    {{--<span class="h1 page-header">Свежие обзоры программ</span>--}}
-    {{--@foreach($programs as $program)--}}
-        {{--<div class="clear">--}}
-			{{--<span class="h3">--}}
-				{{--<a href="/programs/{{ $program->category()->first()->slug }}/{{ $program->slug }}">{{ $program->title }}</a>--}}
-			{{--</span>--}}
-            {{--<div class="page-description">--}}
-                {{--{!! $program->description !!}--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<br>--}}
-        {{--<br>--}}
-    {{--@endforeach--}}
-    {{--<br>--}}
-    {{--<span class="h1 page-header">Свежие записи в блоге</span>--}}
-    {{--@foreach($blog as $b)--}}
-        {{--<div class="clear">--}}
-			{{--<span class="h3">--}}
-				{{--<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>--}}
-			{{--</span>--}}
-            {{--<div class="page-description">--}}
-                {{--{!! $b->description !!}--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<br>--}}
-        {{--<br>--}}
-    {{--@endforeach--}}
-    {{--<br>--}}
-    {{--<span class="h1 page-header">Свежие новости</span>--}}
-    {{--@foreach($news as $new)--}}
-        {{--<div class="clear">--}}
-			{{--<span class="h3">--}}
-				{{--<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>--}}
-			{{--</span>--}}
-            {{--<div class="page-description">--}}
-                {{--{!! $new->description !!}--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<br>--}}
-        {{--<br>--}}
-    {{--@endforeach--}}
-    {{--<br>--}}
+    <br>
+    <span class="h1 page-header">Свежие обзоры программ</span>
+    @foreach($programs as $program)
+        <div class="clear">
+			<span class="h3">
+				<a href="/programs/{{ $program->category()->first()->slug }}/{{ $program->slug }}">{{ $program->title }}</a>
+			</span>
+            <div class="page-description">
+                {!! $program->description !!}
+            </div>
+        </div>
+        <br>
+        <br>
+    @endforeach
+    <br>
+    <span class="h1 page-header">Свежие записи в блоге</span>
+    @foreach($blog as $b)
+        <div class="clear">
+			<span class="h3">
+				<a href="/blog/{{ $b->slug }}">{{ $b->title }}</a>
+			</span>
+            <div class="page-description">
+                {!! $b->description !!}
+            </div>
+        </div>
+        <br>
+        <br>
+    @endforeach
+    <br>
+    <span class="h1 page-header">Свежие новости</span>
+    @foreach($news as $new)
+        <div class="clear">
+			<span class="h3">
+				<a href="/news/{{ $new->slug }}">{{ $new->title }}</a>
+			</span>
+            <div class="page-description">
+                {!! $new->description !!}
+            </div>
+        </div>
+        <br>
+        <br>
+    @endforeach
+    <br>
 @endsection
