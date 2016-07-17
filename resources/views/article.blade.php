@@ -5,7 +5,7 @@
 @section('meta_keywords'){{ $article->meta_keywords }}@endsection
 
 @section('content')
-    <div class="clear" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="clearfix" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
             <h1 itemprop="headline">{{ $article->title }}</h1>
@@ -15,7 +15,7 @@
             <div itemprop="description">
                 {!! $article->description !!}
             </div>
-            <div itemprop="articleBody">
+            <div itemprop="articleBody" class="article-body">
                 {!! $article->body !!}
             </div>
         </div>
