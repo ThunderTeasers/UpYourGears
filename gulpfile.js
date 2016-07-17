@@ -28,9 +28,5 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.sass('main.scss');
-});
-
-elixir(function(mix) {
     mix.scripts(['fancybox.js', 'sidebar.js']);
 });

@@ -6,7 +6,7 @@
     <meta name="keywords" content="@yield('meta_keywords')">
     <meta name="description" content="@yield('meta_description')">
     <title>@yield('meta_title')</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/app.css">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
 <body>

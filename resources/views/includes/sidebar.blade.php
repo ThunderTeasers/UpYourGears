@@ -1,5 +1,4 @@
 <span class="h2">Категории</span>
-
 <nav>
     <ul>
     @foreach($categories as $category)
