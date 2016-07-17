@@ -27,3 +27,23 @@
   clear: both;
   height: 0;
 }
+
+.callout {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid $light-gray;
+  border-left-width: 5px;
+
+  .h3{
+    color: $main-text;
+    font-weight: bold;
+  }
+}
+
+.callout-info {
+  border-left-color: #1b809e;
+}
+
+.callout-danger {
+  border-left-color: #ce4844;
+}

@@ -1,0 +1,35 @@
+.spoiler{
+  &:before{
+    display: block;
+    float: left;
+    background: url(/public/images/common/spoiler.png) left top no-repeat;
+    width: 16px;
+    height: 16px;
+    content: ' ';
+  }
+
+  .spoiler-head{
+    user-select: none;
+    color: $light-gray;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .spoiler-body{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: none;
+    border: 1px solid #2B2B2B;
+    padding: 5px;
+  }
+
+  &.spoiler-open{
+    .spoiler-body{
+      display: block;
+    }
+
+    &:before{
+      background: url(/public/images/common/spoiler.png) left bottom no-repeat;
+    }
+  }
+}
