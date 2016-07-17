@@ -12,13 +12,6 @@
 */
 
 /**
- * Testing new design
- */
-Route::get('/testing', function(){
-    return view('layouts/test');
-});
-
-/**
  * Redirects
  */
 Route::get('/programs/drweb-cureit', function(){
@@ -42,6 +35,14 @@ Route::get('/apple-app-site-association', function(){
 });
 
 Route::get('/tags/{anything}', function(){
+    return Redirect::to('/', 301);
+});
+
+Route::get('/sites/sites', function(){
+    return Redirect::to('/', 301);
+});
+
+Route::get('/articles/programming/maven-basics', function(){
     return Redirect::to('/', 301);
 });
 
