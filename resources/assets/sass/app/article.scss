@@ -4,16 +4,21 @@
   margin-right: 20px;
 }
 
+.article {
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
 .article-body {
   img {
     border: 1px solid #333;
   }
 }
 
-.article-date {
-  display: block;
+.article-author, .article-date{
+  display: inline-block;
   font-size: 14px;
   color: $light-gray;
-  margin-top: -20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }

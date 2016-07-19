@@ -1,32 +1,32 @@
-aside#sidebar{
-  nav{
-    ul{
+aside#sidebar {
+  nav {
+    ul {
       margin: 0;
       padding: 0;
       list-style: none;
 
-      li{
-        a{
+      li {
+        a {
           line-height: 27px;
           height: 27px;
           text-decoration: none;
           color: $light-gray;
           font-size: 15px;
 
-          &:hover, &.active{
+          &:hover, &.active {
             border-bottom: 2px solid $detail-color;
           }
 
-          &.active{
+          &.active {
             font-weight: bold;
           }
         }
 
-        ul{
-          li{
+        ul {
+          li {
             padding-left: 30px;
 
-            a{
+            a {
               color: $light-gray;
               font-size: 14px;
               line-height: 23px;
@@ -35,6 +35,18 @@ aside#sidebar{
           }
         }
       }
+    }
+  }
+
+  .h2:not(:first-of-type) {
+    margin-top: 25px;
+  }
+
+  #about {
+    font-size: 14px;
+
+    p {
+      color: $light-gray;
     }
   }
 }
