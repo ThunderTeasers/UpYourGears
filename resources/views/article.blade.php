@@ -5,11 +5,12 @@
 @section('meta_keywords'){{ $article->meta_keywords }}@endsection
 
 @section('content')
-    <div class="clearfix" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="article clearfix" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
             <h1 itemprop="name">{{ $article->title }}</h1>
             <meta itemprop="headline" content="{{ $article->title }}">
+            <span class="article-author" itemprop="author">Ерохин Максим</span>
             <span class="article-date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('d-M-Y') }}</span>
             <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
         </div>
