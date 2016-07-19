@@ -8,7 +8,7 @@
     <div class="clearfix" itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemprop="inLanguage" content="ru-RU"/>
         <div class="page-header">
-            <h1 itemprop="title">{{ $article->title }}</h1>
+            <h1 itemprop="name">{{ $article->title }}</h1>
             <span class="article-date">{{ \Jenssegers\Date\Date::parse($article->created_at)->format('d-M-Y') }}</span>
             <meta itemprop="datePublished" content="{{ \Jenssegers\Date\Date::parse($article->created_at)->format('Y-m-d') }}"/>
         </div>
