@@ -39,6 +39,7 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     <br>
+    <br>
     <span class="h1 page-header">Свежие обзоры программ</span>
     @foreach($programs as $program)
         <div class="category-article clearfix">

@@ -1,6 +1,5 @@
 <aside id="left">
     <div id="user">
-        <img class="media-object img-thumbnail user-img" src="{{ URL::asset('/public/uploads/'.$user->image) }}">
         <div id="user__body">
             <span id="user__username">{{ Auth::user()->username }}</span>
             <ul id="user__info">
@@ -33,17 +32,6 @@
             </ul>
         </li>
         <li>
-            <a><span class="link-title">Теги</span></a>
-            <ul class="collapse">
-                <li>
-                    <a href="{{ URL::route('dashboard.tags.create') }}">Создать</a>
-                </li>
-                <li>
-                    <a href="{{ URL::route('dashboard.tags.index') }}">Лист</a>
-                </li>
-            </ul>
-        </li>
-        <li>
             <a><span class="link-title">Пользователи</span></a>
             <ul class="collapse">
                 <li>
@@ -51,17 +39,6 @@
                 </li>
                 <li>
                     <a href="{{ URL::route('dashboard.users.index') }}">Лист</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a><span class="link-title">Заметки</span></a>
-            <ul class="collapse">
-                <li>
-                    <a href="{{ URL::route('dashboard.drafts.create') }}">Создать</a>
-                </li>
-                <li>
-                    <a href="{{ URL::route('dashboard.drafts.index') }}">Лист</a>
                 </li>
             </ul>
         </li>
