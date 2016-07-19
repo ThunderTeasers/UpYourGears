@@ -14,6 +14,4 @@
         </li>
     @endforeach
     </ul>
-
-
 </nav>

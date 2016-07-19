@@ -29,9 +29,8 @@ class ArticleController extends Controller{
      */
     public function create(){
         $categories = Category::lists('title', 'id');
-        $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.articles.create', compact('categories', 'tags'));
+        return view('dashboard.articles.create', compact('categories'));
     }
 
     /**
@@ -41,10 +40,7 @@ class ArticleController extends Controller{
      * @return mixed
      */
     public function store(Request $request){
-        $article = Article::create($request->all());
-        if($request['tag_list']){
-            $this->syncTags($article, $request['tag_list']);
-        }
+        Article::create($request->all());
 
         return redirect()->route('dashboard.articles.index');
     }
@@ -57,9 +53,8 @@ class ArticleController extends Controller{
      */
     public function show(Article $article){
         $categories = Category::lists('title', 'id');
-        $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
+        return view('dashboard.articles.edit', compact('article', 'categories'));
     }
 
     /**
@@ -70,13 +65,12 @@ class ArticleController extends Controller{
      */
     public function edit(Article $article){
         $categories = Category::lists('title', 'id');
-        $tags = Tag::lists('title', 'id');
 
-        return view('dashboard.articles.edit', compact('article', 'categories', 'tags'));
+        return view('dashboard.articles.edit', compact('article', 'categories'));
     }
 
     /**
-     * Update article and synchronize tags
+     * Update article
      *
      * @param Article $article
      * @param Request $request
@@ -84,9 +78,6 @@ class ArticleController extends Controller{
      */
     public function update(Article $article, Request $request){
         $article->update($request->all());
-        if($request['tag_list']){
-            $this->syncTags($article, $request['tag_list']);
-        }
 
         return redirect()->back();
     }
@@ -102,15 +93,5 @@ class ArticleController extends Controller{
         $article->delete();
 
         return redirect()->back();
-    }
-
-    /**
-     * Sync up the list of tags in the database
-     *
-     * @param Article $article
-     * @param array $tags
-     */
-    private function syncTags(Article $article, array $tags){
-        $article->tags()->sync($tags);
     }
 }
