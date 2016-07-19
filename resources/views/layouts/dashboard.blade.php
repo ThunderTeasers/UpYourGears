@@ -11,12 +11,14 @@
         {{ URL::forceSchema('https') }}
     @endif
 
-    @include('dashboard.includes.left')
-    <aside id="right">
+    <aside>
+        @include('dashboard.includes.left')
+    </aside>
+    <main>
         <div id="right__wrapper">
             @yield('content')
         </div>
-    </aside>
+    </main>
 
     <script type="text/javascript" src="/public/js/tinymce/tinymce.min.js"></script>
 </body>

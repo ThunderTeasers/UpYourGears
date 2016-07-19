@@ -1,0 +1,28 @@
+// Colors
+$detail-color: #ff8f34;
+$main-text: #121212;
+$light-gray: #7f8c8d;
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex-basis: 15%;
+}
+
+main {
+  display: flex;
+  flex-basis: 85%;
+  justify-content: center;
+}

@@ -8,7 +8,6 @@
         </div>
     </div>
     <ul id="menu">
-        <li class="nav-divider"></li>
         <li>
             <a><span class="link-title">Статьи</span></a>
             <ul class="collapse">

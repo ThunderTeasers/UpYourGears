@@ -1,0 +1,38 @@
+aside{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+      a{
+        line-height: 27px;
+        height: 27px;
+        text-decoration: none;
+        color: $light-gray;
+        font-size: 15px;
+
+        &:hover, &.active{
+          border-bottom: 2px solid $detail-color;
+        }
+
+        &.active{
+          font-weight: bold;
+        }
+      }
+
+      ul{
+        li{
+          padding-left: 30px;
+
+          a{
+            color: $light-gray;
+            font-size: 14px;
+            line-height: 23px;
+            height: 23px;
+          }
+        }
+      }
+    }
+  }
+}
