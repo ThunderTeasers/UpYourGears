@@ -6,4 +6,23 @@ header {
   height: 40px;
   background-color: #fff;
   padding: 15px;
+
+  #left {
+    text-align: center;
+
+    #mobile-menu {
+      display: block !important;
+      width: 40px;
+      height: 40px;
+      top: 14px;
+      left: 12px;
+      position: absolute;
+      background: url("../images/common/menu.png") center center no-repeat;
+      background-size: 40px;
+    }
+  }
+
+  #right {
+    display: none;
+  }
 }

@@ -1,5 +1,6 @@
 <header id="header">
     <div id="left">
+        <a id="mobile-menu"></a>
         <h1><a href="/">UpYourGears</a></h1>
     </div>
     <div id="right">

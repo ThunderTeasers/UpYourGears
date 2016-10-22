@@ -1,10 +1,14 @@
 header {
+  display: flex;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
   padding: 25px 60px;
   line-height: 44px;
-  display: flex;
   flex-flow: row;
   z-index: 999;
+
+  #mobile-menu {
+    display: none;
+  }
 
   h1 {
     margin: 0;
@@ -18,8 +22,8 @@ header {
     flex: 1 0;
     order: 1;
 
-    h1{
-      a{
+    h1 {
+      a {
         text-decoration: none;
       }
     }
@@ -30,29 +34,29 @@ header {
     flex: 1 auto;
     order: 2;
     justify-content: flex-end;
-    
-    nav{
-      ul{
+
+    nav {
+      ul {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-direction: row;
-        
-        li{
+
+        li {
           margin: 0 12px;
 
-          a{
+          a {
             text-decoration: none;
             font-size: 15px;
             padding-bottom: 3px;
 
-            &:hover, &.active{
+            &:hover, &.active {
               border-bottom: 2px solid $detail-color;
             }
           }
 
-          input[type="text"]{
+          input {
             height: 30px;
             line-height: 30px;
             box-sizing: border-box;
