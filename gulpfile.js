@@ -23,3 +23,7 @@ elixir(function(mix){
 elixir(function(mix){
     mix.sass('app.scss');
 });
+
+elixir(function(mix) {
+    mix.scripts(['fancybox.js', 'sidebar.js', 'mobile-menu.js']);
+});
