@@ -5,7 +5,13 @@
 @endsection
 
 @section('content')
-    <table>
+    <div class="block-search">
+        <div class="buttons">
+            <a href="{{ URL::route('dashboard.articles.create') }}" class="btn btn-accept">Создать</a>
+        </div>
+    </div>
+
+    <table class="articles">
         <tr>
             <th>id</th>
             <th>Название</th>
@@ -17,8 +23,8 @@
             <td class="center">{{ $article->id }}</td>
             <td>{{ $article->title }}</td>
             <td class="center">{{ $article->category()->first()['title'] }}</td>
-            <td class="center">
-                <a class="table__view" href="{{ URL::route('dashboard.articles.edit', $article->id) }}">Изменить</a> |
+            <td class="center action">
+                <a class="show" href="{{ URL::route('dashboard.articles.edit', $article->id) }}">Изменить</a>
                 {!! \App\Helpers\Helpers::delete_form(['dashboard.articles.destroy', $article->id]) !!}
             </td>
         </tr>

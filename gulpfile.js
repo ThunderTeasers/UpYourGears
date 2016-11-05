@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-sass-lint');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -12,21 +14,8 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
-});
-
-elixir(function(mix) {
-    mix.sass('admin.scss');
-});
-
-elixir(function(mix) {
-    mix.sass('login.scss');
-});
-
-elixir(function(mix) {
-    mix.sass('user.scss');
-});
-
-elixir(function(mix) {
-    mix.scripts(['fancybox.js', 'sidebar.js', 'mobile-menu.js']);
+    mix
+        .sass('admin.scss')
+        .scripts(['admin.js'])
+        .browserSync({ proxy: 'laravel.dev' });
 });

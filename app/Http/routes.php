@@ -81,7 +81,6 @@ Route::post('/search', [
 Route::group(['middleware' => ['auth', 'admin'], 'namespace' => 'Admin'], function(){
     Route::resource('dashboard/articles', 'ArticleController');
     Route::resource('dashboard/categories', 'CategoryController');
-    Route::resource('dashboard/tags', 'TagController');
     Route::resource('dashboard/users', 'UserController');
     Route::resource('dashboard/drafts', 'DraftController');
 });
@@ -132,14 +131,6 @@ Route::group(['middleware' => ['auth']], function(){
         'as' => 'user.add-comment'
     ]);
 });
-
-/**
- * Get list of articles with tag
- */
-Route::get('/tag/{slug}', [
-    'uses' => 'TagController@show',
-    'as' => 'tag.show'
-])->where('slug', '[A-Za-z0-9]+');
 
 /**
  * Get news

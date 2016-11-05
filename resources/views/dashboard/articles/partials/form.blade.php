@@ -4,7 +4,7 @@
 </div>
 <div class="form-group">
     {!! Form::label('description', 'Описание') !!}
-    {!! Form::textarea('description', null, ['required', 'class' => 'form-control']) !!}
+    {!! Form::textarea('description', null, ['required', 'class' => 'form-control', 'novalidate']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('body', 'Текст') !!}
@@ -20,17 +20,17 @@
 </div>
 <div class="form-group">
     {!! Form::label('slug', 'Slug') !!}
-    {!! Form::text('slug', null, ['required']) !!}
+    {!! Form::text('slug', null, ['required', 'class' => 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('meta_title', 'Мета тайтл') !!}
-    {!! Form::text('meta_title', null) !!}
+    {!! Form::text('meta_title', null, ['class' => 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('meta_description', 'Мета описание') !!}
-    {!! Form::text('meta_description', null) !!}
+    {!! Form::text('meta_description', null, ['class' => 'form-control']) !!}
 </div>
 <div class="form-group">
     {!! Form::label('meta_keywords', 'Мета ключевые слова') !!}
-    {!! Form::text('meta_keywords', null) !!}
+    {!! Form::text('meta_keywords', null, ['class' => 'form-control']) !!}
 </div>

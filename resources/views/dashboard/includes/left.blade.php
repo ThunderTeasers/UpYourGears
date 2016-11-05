@@ -1,45 +1,16 @@
-<aside id="left">
-    <div id="user">
-        <div id="user__body">
-            <span id="user__username">{{ Auth::user()->username }}</span>
-            <ul id="user__info">
-                <a href="/dashboard/logout">Выход</a>
-            </ul>
-        </div>
-    </div>
-    <ul id="menu">
-        <li>
-            <a><span class="link-title">Статьи</span></a>
-            <ul class="collapse">
-                <li>
-                    <a href="{{ URL::route('dashboard.articles.create') }}">Создать</a>
-                </li>
-                <li>
-                    <a href="{{ URL::route('dashboard.articles.index') }}">Лист</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a><span class="link-title">Категории</span></a>
-            <ul class="collapse">
-                <li>
-                    <a href="{{ URL::route('dashboard.categories.create') }}">Создать</a>
-                </li>
-                <li>
-                    <a href="{{ URL::route('dashboard.categories.index') }}">Лист</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a><span class="link-title">Пользователи</span></a>
-            <ul class="collapse">
-                <li>
-                    <a href="{{ URL::route('dashboard.users.create') }}">Создать</a>
-                </li>
-                <li>
-                    <a href="{{ URL::route('dashboard.users.index') }}">Лист</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</aside>
+<ul>
+    <li class="block-user">
+        ThunderTeasers
+    </li>
+    <li class="delimiter"></li>
+    <li>
+        <a href="{{ URL::route('dashboard.articles.index') }}" class="{{ (\Request::route()->getName() === 'dashboard.articles.index') ? 'active' : '' }}">
+            <i class="fa fa-fw fa-file"></i><span class="link-title">Статьи</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ URL::route('dashboard.categories.index') }}" class="{{ (\Request::route()->getName() === 'dashboard.categories.index') ? 'active' : '' }}">
+            <i class="fa fa-fw fa-folder-open"></i><span class="link-title">Категории</span>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,39 @@
+.form-group {
+  label {
+    display: block;
+    color: $color-light;
+    margin-bottom: 0.3rem;
+  }
+
+  & + .form-group {
+    margin-top: 1.5rem;
+  }
+
+  & + .btn {
+    margin-top: 2rem;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+}
+
+input, select {
+  padding: 0.4rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  border: 1px solid $color-darkest;
+  color: $color-light;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.btn-accept {
+  background-color: $color-accept;
+}

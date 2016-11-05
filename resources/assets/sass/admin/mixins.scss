@@ -1,0 +1,4 @@
+@mixin flex-basis($persent) {
+  flex-basis: $persent;
+  max-width: $persent;
+}

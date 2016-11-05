@@ -1,40 +1,65 @@
-table{
+table {
+  border-spacing: 0;
+  min-width: 100%;
   width: 100%;
-  border-collapse: collapse;
-  tr{
-    border: 1px solid #515151;
 
-    th{
-      line-height: 35px;
-      height: 35px;
-    }
+  tr {
+    th,
+    td {
+      color: $color-light;
+      padding: 8px 12px;
+      border-bottom: 1px solid darken($color-dark, 10%);
+      border-top: 1px solid darken($color-dark, 20%);
 
-    td{
-      padding: 5px;
-
-      &:last-child{
-        width: 13%;
+      &.center {
+        text-align: center;
       }
     }
-  }
 
-  form{
-    display: inline-block;
-  }
+    th {
+      border-bottom: 2px solid $color-dark;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
 
-  .table__view, .table__delete{
-    text-decoration: none;
-  }
+    td {
+      &.action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
-  .table__view{
-    color: #00b3ee;
-  }
+        .show, .delete {
+          padding: 7px;
+          color: $color-white;
+          text-decoration: none;
+          border: none;
+          cursor: pointer;
+          font-size: 0.9rem;
+        }
 
-  .table__delete{
-    background: none;
-    border: none;
-    color: #780000;
-    font-size: 16px;
-    cursor: pointer;
+        .show {
+          background-color: $color-primary;
+
+          &:hover {
+            background-color: darken($color-primary, 10%);
+          }
+        }
+
+        .delete {
+          background-color: $color-danger;
+
+          &:hover {
+            background-color: darken($color-danger, 10%);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      td {
+        background-color: darken($color-dark, 20%);
+      }
+    }
   }
 }

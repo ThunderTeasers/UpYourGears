@@ -1,2 +1,8 @@
-@import "admin/prototype";
-@import "admin/sidebar";
+@import 'common/awesome/font-awesome';
+@import 'admin/config';
+@import 'admin/typography';
+@import 'admin/mixins';
+@import 'admin/prototype';
+@import 'admin/table';
+@import 'admin/forms';
+@import 'admin/sidebar';
