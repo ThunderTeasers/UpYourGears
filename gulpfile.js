@@ -13,9 +13,13 @@ require('laravel-elixir-sass-lint');
  |
  */
 
-elixir(function(mix) {
+elixir(function(mix){
     mix
         .sass('admin.scss')
         .scripts(['admin.js'])
         .browserSync({ proxy: 'laravel.dev' });
+});
+
+elixir(function(mix){
+    mix.sass('app.scss');
 });

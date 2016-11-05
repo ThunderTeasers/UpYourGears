@@ -1,5 +1,1 @@
-$(function(){
-
-});
-
-//# sourceMappingURL=all.js.map
+$(function(){});
