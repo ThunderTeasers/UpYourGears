@@ -26,19 +26,19 @@
     <!--noindex-->
     @include('includes.header')
     <!--/noindex-->
-    <main>
+    <div id="wrapper">
         <!--noindex-->
         <aside id="sidebar">
             @include('includes.sidebar')
         </aside>
         <!--/noindex-->
-        <aside id="content">
+        <main>
             @if(!Request::is('/'))
                 @include('includes.breadcrumbs')
             @endif
             @yield('content')
-        </aside>
-    </main>
+        </main>
+    </div>
     <script type="text/javascript" src="/public/js/all.js"></script>
 </body>
 </html>

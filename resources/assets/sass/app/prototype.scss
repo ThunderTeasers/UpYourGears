@@ -7,37 +7,21 @@ $light-gray: #7f8c8d;
   color: #333;
 }
 
-body {
+div#wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+aside {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  flex: 0 0 $sidebar-width;
+  padding: $padding-vertical $padding-horizontal;
 }
 
 main {
   display: flex;
-  position: relative;
-  flex-flow: row;
-  flex: 1;
-  padding-top: 30px;
-}
-
-aside#sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 100vh;
-  left: 60px;
-  padding: 30px 0;
-  width: 220px;
-  margin-right: 20px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-aside#content {
-  display: flex;
-  padding-right: 60px;
-  padding-left: 330px;
-  height: 100vh;
   flex-direction: column;
+  flex: 10;
+  padding: $padding-vertical $padding-horizontal;
 }

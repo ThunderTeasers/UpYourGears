@@ -1,8 +1,6 @@
 "use strict";
 
 (function(document) {
-    window.addEventListener("scroll", updateScrollbar);
-
     function updateScrollbar() {
         var header = document.getElementById('header'),
             main = document.getElementById('sidebar'),
@@ -15,4 +13,6 @@
             main.className = '';
         }
     }
+
+    window.addEventListener("scroll", updateScrollbar);
 })(document);

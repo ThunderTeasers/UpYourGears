@@ -1,4 +1,12 @@
 aside#sidebar {
+  &.fix {
+    div#nav {
+      position: fixed;
+      width: $sidebar-width;
+      top: $padding-vertical;
+    }
+  }
+
   nav {
     ul {
       margin: 0;
