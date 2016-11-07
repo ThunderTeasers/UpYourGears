@@ -3,5 +3,16 @@ main {
 }
 
 aside#sidebar {
-  display: none;
+  display: flex;
+  position: fixed;
+  padding-top: 100px;
+  transform: translate(-100%, 0);
+  background-color: #fff;
+  width: 75%;
+  height: 100%;
+  transition: transform 0.5s;
+
+  &.open {
+    transform: translate(0, 0);
+  }
 }
