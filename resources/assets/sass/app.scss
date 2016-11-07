@@ -1,3 +1,6 @@
+// Common
+@import 'common/awesome/font-awesome';
+
 // Desktop
 @import 'app/config';
 @import 'app/mixins';
@@ -16,13 +19,14 @@
 
 // Tablet
 @media screen and(max-width: $screen-tablet) {
+  @import 'app/tablet/prototype';
   @import 'app/tablet/header';
   @import 'app/tablet/sidebar';
-  @import 'app/tablet/prototype';
   @import 'app/tablet/article';
 }
 
 // Mobile
 @media all and (max-width: $screen-mobile) {
   @import 'app/mobile/prototype';
+  @import 'app/mobile/header';
 }

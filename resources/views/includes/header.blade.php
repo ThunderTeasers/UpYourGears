@@ -1,6 +1,6 @@
 <header id="header">
     <div id="left">
-        <a id="mobile-menu"></a>
+        <a id="mobile-menu" class="fa fa-bars"></a>
         <h1><a href="/">UpYourGears</a></h1>
     </div>
     <div id="right">
