@@ -1,16 +1,19 @@
 "use strict";
 
-(function(document) {
+(function (document) {
     function updateScrollbar() {
-        var header = document.getElementById('header'),
-            main = document.getElementById('sidebar'),
-            doc = document.documentElement,
-            top = doc && doc.scrollTop || document.body.scrollTop;
+        var main = document.getElementById('sidebar');
 
-        if (top > header.offsetHeight) {
-            main.className = 'fix';
-        } else {
-            main.className = '';
+        if (!main.classList.contains('open')) {
+            var header = document.getElementById('header'),
+                doc = document.documentElement,
+                top = doc && doc.scrollTop || document.body.scrollTop;
+
+            if (top > header.offsetHeight) {
+                main.className = 'fix';
+            } else {
+                main.className = '';
+            }
         }
     }
 

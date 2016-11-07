@@ -2,12 +2,12 @@
 
 (function(document) {
     var button = document.getElementById("mobile-menu"),
-        sidebar = document.getElementById("sidebar");
+            doc = document.documentElement;
     button.onclick = function(){
-        if(sidebar.className == "open"){
-            sidebar.className = "";
+        if(doc.className == "open"){
+            doc.className = "";
         }else{
-            sidebar.className = "open";
+            doc.className = "open";
         }
     }
 })(document);

@@ -11,8 +11,12 @@ aside#sidebar {
   width: 75%;
   height: 100%;
   transition: transform 0.5s;
+}
 
-  &.open {
+html.open {
+  overflow: hidden;
+
+  aside#sidebar{
     transform: translate(0, 0);
   }
 }
